@@ -49,7 +49,7 @@ body {
 body {
   background: #fff;
   /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-  font-family: 'Courier New', notoSence, monospace;
+  font-family: 'noto Sans', 'Courier New', monospace;
 }
 
 ::selection {
@@ -143,4 +143,13 @@ body {
   html {
     @apply font-sans;
   }
+}
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
