@@ -1,63 +1,30 @@
 "use client"
-import Image from "next/image"
 
+import type { ComponentType } from "react";
 import LogoLoop from '@/components/LogoLoop';
 import { SiInstagram, SiGmail, SiGithub, SiFacebook, SiLinktree, SiBlender } from 'react-icons/si';
 import { IoLogoLinkedin, IoCode, IoGlobe } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";
 
-const Logos = [
-  {
-    node: <SiInstagram />,
-    title: "Instagram",
-    href: "https://www.instagram.com/yenchia._.0504"
-  },
-  {
-    node: <SiGmail />,
-    title: "Email",
-    href: "mailto:yanjia20050504@gmail.com"
-  },
-  {
-    node: <IoLogoLinkedin />,
-    title: "LinkedIn",
-    href: "https://www.linkedin.com/in/fengyenchia"
-  },
-  {
-    node: <SiGithub />,
-    title: "GitHub",
-    href: "https://github.com/fengyenchia"
-  },
-  {
-    node: <FaXTwitter />,
-    title: "X",
-    href: "https://x.com/fengyenchia"
-  },
-  {
-    node: <SiFacebook />,
-    title: "facebook",
-    href: "https://www.facebook.com/fengyenchia0504/"
-  },
-  {
-    node: <IoCode />,
-    title: "openproccessing",
-    href: "https://openprocessing.org/user/522490/"
-  },
-  {
-    node: <IoGlobe />,
-    title: "my website",
-    href: "http://fengyenchia.github.io/my-page/"
-  },
-  {
-    node: <SiBlender />,
-    title: "my 3d website",
-    href: "https://112405033.weebly.com/"
-  },
-  {
-    node: <SiLinktree />,
-    title: "linkTree",
-    href: "https://linktr.ee/yenchia"
-  },
+const socialLogos = [
+  { node: <SiInstagram />, title: "Instagram", href: "https://www.instagram.com/yenchia._.0504" },
+  { node: <SiGmail />, title: "Email", href: "mailto:yanjia20050504@gmail.com" },
+  { node: <IoLogoLinkedin />, title: "LinkedIn", href: "https://www.linkedin.com/in/fengyenchia" },
+  { node: <SiGithub />, title: "GitHub", href: "https://github.com/fengyenchia" },
+  { node: <FaXTwitter />, title: "X", href: "https://x.com/fengyenchia" },
+  { node: <SiFacebook />, title: "facebook", href: "https://www.facebook.com/fengyenchia0504/" },
+  { node: <IoCode />, title: "openproccessing", href: "https://openprocessing.org/user/522490/" },
+  { node: <IoGlobe />, title: "my website", href: "http://fengyenchia.github.io/my-page/" },
+  { node: <SiBlender />, title: "my 3d website", href: "https://112405033.weebly.com/" },
+  { node: <SiLinktree />, title: "linkTree", href: "https://linktr.ee/yenchia" },
 ];
+
+type LogoLoopPropsLocal = {
+  logos: typeof socialLogos;
+  [key: string]: unknown;
+};
+
+const TypedLogoLoop: ComponentType<LogoLoopPropsLocal> = LogoLoop as ComponentType<LogoLoopPropsLocal>;
 
 export default function About() {
   return (
@@ -176,14 +143,17 @@ export default function About() {
         <div className="mt-auto pt-5 flex justify-center w-full overflow-hidden">
           <div className="w-full max-w-xl overflow-hidden">
             <div className="h-10 text-gray-500">
-              <LogoLoop
-                logos={Logos}
+              <TypedLogoLoop
+                logos={socialLogos}
                 speed={100}
-                direction="right"
-                logoHeight={24}
-                gap={40}
+                direction="left"
+                logoHeight={60}
+                gap={60}
                 hoverSpeed={0}
-                useCustomRender={false}
+                scaleOnHover
+                fadeOut
+                fadeOutColor="#ffffff"
+                ariaLabel="Technology partners"
               />
             </div>
           </div>
