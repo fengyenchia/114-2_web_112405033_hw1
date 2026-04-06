@@ -146,14 +146,13 @@ export default function About() {
               <TypedLogoLoop
                 logos={socialLogos}
                 speed={100}
-                direction="left"
-                logoHeight={60}
-                gap={60}
+                direction="right"
+                logoHeight={30}
+                gap={40}
                 hoverSpeed={0}
                 scaleOnHover
                 fadeOut
-                fadeOutColor="#ffffff"
-                ariaLabel="Technology partners"
+                fadeOutColor="#ffffff00"
               />
             </div>
           </div>
