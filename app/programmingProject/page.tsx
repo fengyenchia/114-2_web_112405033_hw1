@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 
-export default function Hobby() {
+export default function Programming_Project() {
   
   return (
     <>
