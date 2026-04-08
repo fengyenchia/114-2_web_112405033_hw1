@@ -43,8 +43,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-fullflex flex-col">
-        <div className="flex h-full bg-[url('/bg-2.png')] bg-center bg-cover"> 
-          {/* bg-[url('/260203.png')] */}{/* bg-gray-800] */}
+        <div className="flex flex-col md:flex-row h-full bg-[url('/bg-2.png')] bg-center bg-cover"> 
 
           {/* 左邊 */}
           <div className="p-8">
@@ -89,14 +88,14 @@ export default function RootLayout({
                 <Link href="/designProject">
                   <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Design Project</div>
                 </Link>
-                <Link href="/about">
+                <Link href="/programmingProject">
                   <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Programming Project</div>
                 </Link>
-                <Link href="/about">
-                  <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Exhibition works</div>
+                <Link href="/exhibitionWorks">
+                  <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/10">Exhibition works</div>
                 </Link>
-                <Link href="/about">
-                  <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/10">3D works</div>
+                <Link href="/3dWorks">
+                  <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">3D works</div>
                 </Link>
               </div>
 

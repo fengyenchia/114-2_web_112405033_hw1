@@ -1,5 +1,4 @@
 "use client"
-
 import type { ComponentType } from "react";
 import LogoLoop from '@/components/LogoLoop';
 import { SiInstagram, SiGmail, SiGithub, SiFacebook, SiLinktree, SiBlender } from 'react-icons/si';
@@ -42,49 +41,63 @@ export default function About() {
         <div className="flex flex-col gap-4 w-full">
 
           {/* Education */}
-          <div className="flex gap-8 border border-gray-500/50 rounded-md p-4 w-full">
+          <div className="flex gap-8 border border-gray-500/50 rounded-md px-4 py-2 w-full">
             <div className="text-gray-500 text-md w-24 shrink-0">
-              <p className="font-bold">Education</p>
+              <p className="font-bold my-2">Education</p>
               <p className="text-xs text-gray-400">in NCCU</p>
             </div>
-            <div className="text-gray-500 text-md border-s border-gray-500/50 ps-6 grow space-y-4">
-              <div>
-                <p className="font-bold">國立政治大學</p>
-                <p className="text-sm text-gray-500">廣告學系 | 2023 - Now</p>
+            <div className="text-gray-500 text-md border-s border-gray-500/50 grow ps-4 space-y-4">
+              <div className="group">
+                <div className="ps-2 py-2 rounded-md group-hover:bg-white/20 group-hover:translate-x-1 transition-all duration-500">
+                  <p className="font-bold">國立政治大學</p>
+                  <p className="text-sm text-gray-500">廣告學系 | 2023 - Now</p>
+                </div>
               </div>
-              <div>
-                <p className="font-bold">國立政治大學</p>
-                <p className="text-sm text-gray-500">數位內容與科技學士學位學程 | 2023 - Now</p>
+              <div className="group">
+                <div className="ps-2 py-2 rounded-md group-hover:bg-white/20 group-hover:translate-x-1 transition-all duration-500">
+                  <p className="font-bold">國立政治大學</p>
+                  <p className="text-sm text-gray-500">數位內容與科技學士學位學程 | 2023 - Now</p>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Experience */}
-          <div className="flex gap-8 border border-gray-500/50 rounded-md p-4 w-full">
+          <div className="flex gap-8 border border-gray-500/50 rounded-md px-4 py-2 w-full">
             <div className="text-gray-500 text-md w-24 shrink-0">
-              <p className="font-bold">Experience</p>
+              <p className="font-bold my-2">Experience</p>
               <p className="text-xs text-gray-400">in NCCU</p>
             </div>
-            <div className="text-gray-500 text-md border-s border-gray-500/50 ps-6 grow space-y-4">
-              <div>
-                <p className="font-bold">抓馬戲劇社 美宣</p>
-                <p className="text-sm text-gray-500">2025/02 - Now</p>
+            <div className="text-gray-500 text-md border-s border-gray-500/50 grow ps-4 space-y-4">
+              <div className="group">
+                <div className="ps-2 py-2 rounded-md group-hover:bg-white/20 group-hover:translate-x-1 transition-all duration-500">
+                  <p className="font-bold">抓馬戲劇社 美宣</p>
+                  <p className="text-sm text-gray-500">2025/02 - Now</p>
+                </div>
               </div>
-              <div>
-                <p className="font-bold">區塊鏈應用課程 展覽主視覺</p>
-                <p className="text-sm text-gray-500">2025/09 - 2025/12</p>
+              <div className="group">
+                <div className="ps-2 py-2 rounded-md group-hover:bg-white/20 group-hover:translate-x-1 transition-all duration-500">
+                  <p className="font-bold">區塊鏈應用課程 展覽主視覺</p>
+                  <p className="text-sm text-gray-500">2025/09 - 2025/12</p>
+                </div>
               </div>
-              <div>
-                <p className="font-bold">傳播學院數位平台年度大展 展覽組長</p>
-                <p className="text-sm text-gray-500">2025/09 - 2025/12</p>
+              <div className="group">
+                <div className="ps-2 py-2 rounded-md group-hover:bg-white/20 group-hover:translate-x-1 transition-all duration-500">
+                  <p className="font-bold">傳播學院數位平台年度大展 展覽組長</p>
+                  <p className="text-sm text-gray-500">2025/09 - 2025/12</p>
+                </div>
               </div>
-              <div>
-                <p className="font-bold">傳播學院數位平台 教學組長</p>
-                <p className="text-sm text-gray-500">2025/02 - 2025/12</p>
+              <div className="group">
+                <div className="ps-2 py-2 rounded-md group-hover:bg-white/20 group-hover:translate-x-1 transition-all duration-500">
+                  <p className="font-bold">傳播學院數位平台 教學組長</p>
+                  <p className="text-sm text-gray-500">2025/02 - 2025/12</p>
+                </div>
               </div>
-              <div>
-                <p className="font-bold">包種茶節 視覺設計組</p>
-                <p className="text-sm text-gray-500">2023/09 - 2023/12</p>
+              <div className="group">
+                <div className="ps-2 py-2 rounded-md group-hover:bg-white/20 group-hover:translate-x-1 transition-all duration-500">
+                  <p className="font-bold">包種茶節 視覺設計組</p>
+                  <p className="text-sm text-gray-500">2023/09 - 2023/12</p>
+                </div>
               </div>
             </div>
           </div>

@@ -53,7 +53,7 @@ body {
 }
 
 ::selection {
-  background: rgba(251, 191, 36, 0.35);
+  background: rgb(255,226,226,1);
 }
 
 @theme inline {
