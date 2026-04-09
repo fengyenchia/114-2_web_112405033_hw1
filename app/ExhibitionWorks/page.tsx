@@ -25,20 +25,16 @@ export default function Exibition_Works() {
           <div className="flex gap-3 w-full">
             {/* picture 1 */}
             <div className="group relative aspect-3/1 w-full overflow-hidden rounded-sm">
-              <video
-                src="/exhibition/主視覺影片.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute inset-0 scale-101 h-full w-full object-cover"
-              />
+              <video controls preload="none" className="absolute inset-0 scale-101 h-full w-full object-cover" autoPlay loop muted playsInline>
+                <source src="/exhibition/主視覺影片.mp4" type="video/mp4" />
+              </video>
               <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-gray-900 
                 opacity-0 group-hover:opacity-80 transition-all duration-500 pointer-events-none">
                 <p className="absolute inset-0 z-1 flex items-end justify-center pb-3 text-white text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  N{}U-一切尚在編譯中 展覽主視覺
+                  N{ }U-一切尚在編譯中 展覽主視覺
                 </p>
               </div>
+
             </div>
           </div>
           {/* row 2 */}
@@ -56,7 +52,7 @@ export default function Exibition_Works() {
               <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-gray-900 
                 opacity-0 group-hover:opacity-80 transition-all duration-500 pointer-events-none">
                 <p className="absolute inset-0 z-1 flex items-end justify-center pb-3 text-white text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">
-                Through the Window
+                  Through the Window
                 </p>
               </div>
             </div>
@@ -73,11 +69,11 @@ export default function Exibition_Works() {
               <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-gray-900 
                 opacity-0 group-hover:opacity-80 transition-all duration-500 pointer-events-none">
                 <p className="absolute inset-0 z-1 flex items-end justify-center pb-3 text-white text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">
-                Through the Window
+                  Through the Window
                 </p>
               </div>
             </div>
-            {/* picture 3 */}
+            {/*  3picture */}
             <div className="group relative aspect-3/4 w-full flex-1 min-w-0 overflow-hidden rounded-sm">
               <video
                 src="/exhibition/3.mp4"
@@ -90,7 +86,7 @@ export default function Exibition_Works() {
               <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-gray-900 
                 opacity-0 group-hover:opacity-80 transition-all duration-500 pointer-events-none">
                 <p className="absolute inset-0 z-1 flex items-end justify-center pb-3 text-white text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">
-                Through the Window
+                  Through the Window
                 </p>
               </div>
             </div>
@@ -107,7 +103,7 @@ export default function Exibition_Works() {
               <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-gray-900 
                 opacity-0 group-hover:opacity-80 transition-all duration-500 pointer-events-none">
                 <p className="absolute inset-0 z-1 flex items-end justify-center pb-3 text-white text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">
-                Through the Window
+                  Through the Window
                 </p>
               </div>
             </div>
@@ -135,6 +131,7 @@ export default function Exibition_Works() {
             <div className="group relative aspect-5/4 w-full flex-1 overflow-hidden rounded-sm">
               <Image
                 src="/exhibition/無盡 (1).png"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt="bg"
                 fill
                 loading="eager"
@@ -143,7 +140,7 @@ export default function Exibition_Works() {
               <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-gray-900 
                 opacity-0 group-hover:opacity-80 transition-all duration-500 pointer-events-none">
                 <p className="absolute inset-0 z-1 flex items-end justify-center pb-3 text-white text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">
-                Endless
+                  Endless
                 </p>
               </div>
             </div>
@@ -151,6 +148,7 @@ export default function Exibition_Works() {
             <div className="group relative aspect-5/4 w-full flex-1 overflow-hidden rounded-sm">
               <Image
                 src="/exhibition/無盡 (4).png"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt="bg"
                 fill
                 loading="eager"
@@ -159,7 +157,7 @@ export default function Exibition_Works() {
               <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-gray-900 
                 opacity-0 group-hover:opacity-80 transition-all duration-500 pointer-events-none">
                 <p className="absolute inset-0 z-1 flex items-end justify-center pb-3 text-white text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">
-                Endless
+                  Endless
                 </p>
               </div>
             </div>
@@ -167,6 +165,7 @@ export default function Exibition_Works() {
             <div className="group relative aspect-4/5 w-full flex-1 overflow-hidden rounded-sm">
               <Image
                 src="/exhibition/無盡 (2).png"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt="bg"
                 fill
                 loading="eager"
@@ -186,6 +185,7 @@ export default function Exibition_Works() {
             <div className="group relative aspect-5/2 w-full flex-1 overflow-hidden rounded-sm">
               <Image
                 src="/exhibition/flowing (1).png"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt="bg"
                 fill
                 loading="eager"
@@ -202,6 +202,7 @@ export default function Exibition_Works() {
             <div className="group relative aspect-5/2 w-full flex-3 overflow-hidden rounded-sm">
               <Image
                 src="/exhibition/flowing (2).png"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt="bg"
                 fill
                 loading="eager"
