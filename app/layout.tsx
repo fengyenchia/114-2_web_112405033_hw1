@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link";
 
 
+import Menu2 from "../components/Menu2"
 
 // ICON
 import { IoLogoInstagram } from "react-icons/io5";
@@ -43,11 +44,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-fullflex flex-col">
-        <div className="flex flex-col md:flex-row h-full bg-[url('/bg-2.png')] bg-center bg-cover"> 
+        <div className="flex flex-col md:flex-row h-full bg-[url('/bg-2.png')] bg-center bg-cover">
 
           {/* 左邊 */}
+          {/* <div>
+            <Menu2 />
+          </div> */}
           <div className="p-8">
-            
             <div className="custom-scrollbar bg-red-50/0 backdrop-blur-2xl p-8 w-[360px] h-full rounded-2xl shadow-lg overflow-y-auto">
               <div className="flex justify-center items-center w-full">
                 <div className="bg-white w-[80px] h-[80px] rounded-full border-4 border-x-red-200 border-y-red-100 ring-4 ring-red-100 shadow-lg shadow-red-200 overflow-hidden flex justify-center items-center">
@@ -57,18 +60,14 @@ export default function RootLayout({
 
               <div className="text-center font-medium text-white mt-5">馮 妍 嘉</div>
               <div className="text-center text-white pb-2">NCCU AD x DCT</div>
-              
+
 
               <div className="flex gap-2">
-                {/* icons, links, images */}
-                <div>
 
-              </div>
-                
                 <div className="flex w-full justify-evenly text-[20px] text-white py-3">
                   <Link href="https://www.instagram.com/yenchia._.0504/" target="/blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
                     <IoLogoInstagram />
-                    </div></Link>
+                  </div></Link>
                   <Link href="https://www.instagram.com/yenchia._.0504/" target="/blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
                     <IoMail />
                   </div></Link>
@@ -97,6 +96,9 @@ export default function RootLayout({
                 <Link href="/3dWorks">
                   <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">3D Works</div>
                 </Link>
+                <Link href="/grid">
+                  <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Grid</div>
+                </Link>
               </div>
 
             </div>
@@ -106,7 +108,7 @@ export default function RootLayout({
           <div className="py-8 pr-8 w-full h-full">
             <div className="bg-red-50/0 backdrop-blur-2xl p-4 rounded-2xl w-full h-full shadow-lg">
 
-                {children}
+              {children}
 
             </div>
           </div>

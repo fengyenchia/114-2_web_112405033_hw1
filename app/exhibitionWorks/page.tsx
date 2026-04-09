@@ -2,6 +2,9 @@
 import Image from "next/image"
 import Link from "next/link";
 
+import ScrollVelocity from '@/components/ScrollVelocity';
+
+
 export default function Exibition_Works() {
 
   return (
@@ -31,7 +34,7 @@ export default function Exibition_Works() {
               <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-gray-900 
                 opacity-0 group-hover:opacity-80 transition-all duration-500 pointer-events-none">
                 <p className="absolute inset-0 z-1 flex items-end justify-center pb-3 text-white text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  N{ }U-一切尚在編譯中 展覽主視覺
+                  區塊鏈應用 展覽主視覺
                 </p>
               </div>
 
@@ -125,6 +128,16 @@ export default function Exibition_Works() {
               </div>
             </div>
           </div>
+
+
+          <ScrollVelocity
+            texts={['Built with', 'p5.js']}
+            velocity={100}
+            numCopies={10}
+            className="custom-scroll-text text-gray-600 text-md"
+          />
+
+
           {/* row 3 */}
           <div className="flex gap-3 w-full">
             {/* picture 1 */}
