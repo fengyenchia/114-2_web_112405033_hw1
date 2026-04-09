@@ -92,10 +92,10 @@ export default function RootLayout({
                   <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Programming Project</div>
                 </Link>
                 <Link href="/exhibitionWorks">
-                  <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/10">Exhibition works</div>
+                  <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/10">Exhibition Works</div>
                 </Link>
                 <Link href="/3dWorks">
-                  <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">3D works</div>
+                  <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">3D Works</div>
                 </Link>
               </div>
 
