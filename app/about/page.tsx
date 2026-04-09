@@ -1,4 +1,8 @@
 "use client"
+
+import Image from "next/image"
+import Link from "next/link";
+
 import type { ComponentType } from "react";
 import LogoLoop from '@/components/LogoLoop';
 import { SiInstagram, SiGmail, SiGithub, SiFacebook, SiLinktree, SiBlender } from 'react-icons/si';
@@ -31,7 +35,14 @@ export default function About() {
 
       <div className="flex flex-col gap-6 text-gray-600 w-full">
         {/* About */}
-        <div className="font-bold text-2xl">About</div>
+        <div className="flex justify-between">
+          <div className="inline-block font-bold text-2xl">About</div>
+          <Link href="../">
+            <div className="inline-block text-md text-white/50 border border-white/50 rounded-lg py-1 px-2 shadow-md hover:bg-white/50 hover:translate-y-0.5 hover:text-gray-500 hover:border-gray-400 transition-all duration-500">
+              Home
+            </div>
+          </Link>
+        </div>
         <hr className="border-gray-500/20" />
         <div className="text-gray-500 py-2 text-md leading-relaxed">
           我是個熱衷於嘗試新事物且喜歡挑戰的人，對我來說，設計的靈感來自生活，我時常將設計與科技結合，透過程式、互動技術或是其他數位工具，讓創意與美的展現有更多可能。我也擅長以簡潔的線條、擬人的物件，搭配可愛的色彩來呈現作品，藉此傳達出活潑卻也讓人眼前一亮的感覺。
@@ -172,6 +183,6 @@ export default function About() {
         </div>
 
       </div>
-    </div>
+    </div >
   );
 }

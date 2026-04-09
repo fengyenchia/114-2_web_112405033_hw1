@@ -8,20 +8,27 @@ export default function DesignProject() {
 
       <div className="flex flex-col gap-6 text-gray-600 w-full">
         {/* DesignProject */}
-        <div className="font-bold text-2xl">Design Project</div>
+        <div className="flex justify-between">
+          <div className="inline-block font-bold text-2xl">Design Project</div>
+          <Link href="../">
+            <div className="inline-block text-md text-white/50 border border-white/50 rounded-lg py-1 px-2 shadow-md hover:bg-white/50 hover:translate-y-0.5 hover:text-gray-500 hover:border-gray-400 transition-all duration-500">
+              Home
+            </div>
+          </Link>
+        </div>
         <hr className="border-gray-500/20" />
 
         {/* 卡片 */}
         <div className="grid grid-cols-2 gap-6 w-full">
           {/* card 1 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-5/3 w-full overflow-hidden bg-gray-900 rounded-sm border border-white/70">
+            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
               <Image
-                src="/bg.png"
+                src="/design/character.png"
                 alt="bg"
                 fill
                 loading="eager"
-                className="object-cover mask-b-from-40% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
               />
             </div>
             <div className="">
@@ -42,13 +49,13 @@ export default function DesignProject() {
           </div>
           {/* card 2 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-5/3 w-full overflow-hidden bg-gray-900 rounded-sm border border-white/70">
+            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
               <Image
-                src="/bg.png"
+                src="/design/gatherTown.png"
                 alt="bg"
                 fill
                 loading="eager"
-                className="object-cover mask-b-from-40% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
               />
             </div>
             <div className="">
@@ -70,13 +77,13 @@ export default function DesignProject() {
           </div>
           {/* card 3 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-5/3 w-full overflow-hidden bg-gray-900 rounded-sm border border-white/70">
+            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
               <Image
-                src="/bg.png"
+                src="/design/comic.png"
                 alt="bg"
                 fill
                 loading="eager"
-                className="object-cover mask-b-from-40% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
               />
             </div>
             <div className="">
@@ -96,19 +103,19 @@ export default function DesignProject() {
           </div>
           {/* card 4 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-5/3 w-full overflow-hidden bg-gray-900 rounded-sm border border-white/70">
+            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
               <Image
-                src="/bg.png"
+                src="/design/poster.png"
                 alt="bg"
                 fill
                 loading="eager"
-                className="object-cover mask-b-from-40% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
               />
             </div>
             <div className="">
               <div>
                 <p className="text-gray-600 font-bold text-lg">海報設計</p>
-                <p className="text-gray-500">創意與設計</p>
+                <p className="text-gray-500">接案</p>
               </div>
               <div className="text-gray-400 mt-2 text-sm">
                 <p className="inline-block bg-red-50/80 border-0 border-red-50/50 rounded-full shadow-md shadow-red-100/50 px-2 mb-4 mr-2">Photoshop</p>
@@ -123,13 +130,13 @@ export default function DesignProject() {
           </div>
           {/* card 5 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-5/3 w-full overflow-hidden bg-gray-900 rounded-sm border border-white/70">
+            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
               <Image
-                src="/bg.png"
+                src="/design/arena.png"
                 alt="bg"
                 fill
                 loading="eager"
-                className="object-cover mask-b-from-40% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
               />
             </div>
             <div className="">
@@ -149,13 +156,13 @@ export default function DesignProject() {
           </div>
           {/* card 6 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-5/3 w-full overflow-hidden bg-gray-900 rounded-sm border border-white/70">
+            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
               <Image
-                src="/bg.png"
+                src="/design/figma.png"
                 alt="bg"
                 fill
                 loading="eager"
-                className="object-cover mask-b-from-40% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
               />
             </div>
             <div className="">
@@ -195,9 +202,9 @@ export default function DesignProject() {
         {/* 插圖 */}
         <div className="flex-col w-full h-full mb-4">
           <p className="text-gray-600 text-lg font-bold mb-3">插圖</p>
-          <div className="relative aspect-5/1 w-full overflow-hidden rounded-lg shadow-md shadow-red-200/50">
+          <div className="relative aspect-2/1 w-full overflow-hidden rounded-lg shadow-md shadow-red-200/50">
             <Image
-              src="/bg.png"
+              src="/design/banner.png"
               alt="bg"
               fill
               loading="eager"

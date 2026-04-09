@@ -84,7 +84,14 @@ export default function Three_D_Works() {
 
       <div className="flex flex-col gap-6 text-gray-600 w-full">
         {/* Three_D_Works */}
-        <div className="font-bold text-2xl">3D Works</div>
+        <div className="flex justify-between">
+          <div className="inline-block font-bold text-2xl">3D Works</div>
+          <Link href="../">
+            <div className="inline-block text-md text-white/50 border border-white/50 rounded-lg py-1 px-2 shadow-md hover:bg-white/50 hover:translate-y-0.5 hover:text-gray-500 hover:border-gray-400 transition-all duration-500">
+              Home
+            </div>
+          </Link>
+        </div>
         <hr className="border-gray-500/20" />
 
         {/* 圖片 */}
