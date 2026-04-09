@@ -70,7 +70,7 @@ export default function Three_D_Works() {
               loop
               muted
               playsInline
-              className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 openLayer scale-60 rounded-lg"
+              className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 openLayer scale-90 lg:scale-60 rounded-lg"
             />
             {/* close */}
             <div className="absolute top-[5%] right-[5%] text-md text-gray-200 hover:text-gray-400 transition-all duration-400"
@@ -87,7 +87,7 @@ export default function Three_D_Works() {
         <div className="flex justify-between">
           <div className="inline-block font-bold text-2xl">3D Works</div>
           <Link href="../">
-            <div className="inline-block text-md text-white/50 border border-white/50 rounded-lg py-1 px-2 shadow-md hover:bg-white/50 hover:translate-y-0.5 hover:text-gray-500 hover:border-gray-400 transition-all duration-500">
+            <div className="hidden lg:inline-block text-md text-white/50 border border-white/50 rounded-lg py-1 px-2 shadow-md hover:bg-white/50 hover:translate-y-0.5 hover:text-gray-500 hover:border-gray-400 transition-all duration-500">
               Home
             </div>
           </Link>
@@ -97,11 +97,11 @@ export default function Three_D_Works() {
         {/* 圖片 */}
         <div className="flex flex-col gap-6 w-full">
           {/* video 1 */}
-          <div className="flex gap-3 w-full">
+          <div className="flex flex-col md:flex-row gap-3 w-full">
             {/* text */}
-            <div className="content-end w-[40%]">
+            <div className="content-end md:w-[40%]">
               <p className="text-gray-500 text-sm">2026</p>
-              <p className="font-bold text-lg text-gray-600">Procedural LOGO Sequence Animation</p>
+              <p className="font-bold text-md md:text-lg text-gray-600">Procedural LOGO Sequence Animation</p>
             </div>
             {/* video */}
             <div className="relative aspect-video w-full overflow-hidden rounded-lg shadow-md shadow-red-200/50 cursor-pointer" onClick={() => setShowVideo_1(true)}>
@@ -117,11 +117,11 @@ export default function Three_D_Works() {
             </div>
           </div>
           {/* video 2 */}
-          <div className="flex gap-3 w-full">
+          <div className="flex flex-col md:flex-row gap-3 w-full">
             {/* text */}
-            <div className="content-end w-[40%]">
+            <div className="content-end md:w-[40%]">
               <p className="text-gray-500 text-sm">2026</p>
-              <p className="font-bold text-lg text-gray-600">NCCU LOGO Animation</p>
+              <p className="font-bold text-md md:text-lg text-gray-600">NCCU LOGO Animation</p>
             </div>
             {/* video */}
             <div className="relative aspect-video w-full overflow-hidden rounded-lg shadow-md shadow-red-200/50 cursor-pointer" onClick={() => setShowVideo_2(true)}>
@@ -137,11 +137,11 @@ export default function Three_D_Works() {
             </div>
           </div>
           {/* video 3 */}
-          <div className="flex gap-3 w-full">
+          <div className="flex flex-col md:flex-row gap-3 w-full">
             {/* text */}
-            <div className="content-end w-[40%]">
+            <div className="content-end md:w-[40%]">
               <p className="text-gray-500 text-sm">2025</p>
-              <p className="font-bold text-lg text-gray-600">Alarm Clock Animation</p>
+              <p className="font-bold text-md md:text-lg text-gray-600">Alarm Clock Animation</p>
             </div>
             {/* video */}
             <div className="relative aspect-square w-full overflow-hidden rounded-lg shadow-md shadow-red-200/50 cursor-pointer" onClick={() => setShowVideo_3(true)}>

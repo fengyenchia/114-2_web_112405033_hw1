@@ -11,7 +11,7 @@ export default function DesignProject() {
         <div className="flex justify-between">
           <div className="inline-block font-bold text-2xl">Design Project</div>
           <Link href="../">
-            <div className="inline-block text-md text-white/50 border border-white/50 rounded-lg py-1 px-2 shadow-md hover:bg-white/50 hover:translate-y-0.5 hover:text-gray-500 hover:border-gray-400 transition-all duration-500">
+            <div className="hidden lg:inline-block text-md text-white/50 border border-white/50 rounded-lg py-1 px-2 shadow-md hover:bg-white/50 hover:translate-y-0.5 hover:text-gray-500 hover:border-gray-400 transition-all duration-500">
               Home
             </div>
           </Link>
@@ -19,16 +19,17 @@ export default function DesignProject() {
         <hr className="border-gray-500/20" />
 
         {/* 卡片 */}
-        <div className="grid grid-cols-2 gap-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {/* card 1 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
+            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/70 hover:bg-black/80 transition-all duration-800 rounded-sm border border-white/70">
               <Image
                 src="/design/character.png"
                 alt="bg"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading="eager"
-                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover transition-all duration-800 ease-in-out group-hover:scale-110 group-hover:brightness-75"
               />
             </div>
             <div className="">
@@ -49,13 +50,14 @@ export default function DesignProject() {
           </div>
           {/* card 2 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
+            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/70 hover:bg-black/80 transition-all duration-800 rounded-sm border border-white/70">
               <Image
                 src="/design/gatherTown.png"
                 alt="bg"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading="eager"
-                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover transition-all duration-800 ease-in-out group-hover:scale-110 group-hover:brightness-75"
               />
             </div>
             <div className="">
@@ -77,13 +79,14 @@ export default function DesignProject() {
           </div>
           {/* card 3 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
+            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/70 hover:bg-black/80 transition-all duration-800 rounded-sm border border-white/70">
               <Image
                 src="/design/comic.png"
                 alt="bg"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading="eager"
-                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover transition-all duration-800 ease-in-out group-hover:scale-110 group-hover:brightness-75"
               />
             </div>
             <div className="">
@@ -103,13 +106,14 @@ export default function DesignProject() {
           </div>
           {/* card 4 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
+            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/70 hover:bg-black/80 transition-all duration-800 rounded-sm border border-white/70">
               <Image
                 src="/design/poster.png"
                 alt="bg"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading="eager"
-                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover transition-all duration-800 ease-in-out group-hover:scale-110 group-hover:brightness-75"
               />
             </div>
             <div className="">
@@ -130,13 +134,14 @@ export default function DesignProject() {
           </div>
           {/* card 5 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
+            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/70 hover:bg-black/80 transition-all duration-800 rounded-sm border border-white/70">
               <Image
                 src="/design/arena.png"
                 alt="bg"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading="eager"
-                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover transition-all duration-800 ease-in-out group-hover:scale-110 group-hover:brightness-75"
               />
             </div>
             <div className="">
@@ -156,13 +161,14 @@ export default function DesignProject() {
           </div>
           {/* card 6 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
+            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/70 hover:bg-black/80 transition-all duration-800 rounded-sm border border-white/70">
               <Image
                 src="/design/figma.png"
                 alt="bg"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading="eager"
-                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover transition-all duration-800 ease-in-out group-hover:scale-110 group-hover:brightness-75"
               />
             </div>
             <div className="">
@@ -207,6 +213,7 @@ export default function DesignProject() {
               src="/design/banner.png"
               alt="bg"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               loading="eager"
               className="object-cover"
             />

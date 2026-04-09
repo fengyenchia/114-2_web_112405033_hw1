@@ -15,7 +15,7 @@ export default function Exibition_Works() {
         <div className="flex justify-between">
           <div className="inline-block font-bold text-2xl">Exibition Works</div>
           <Link href="../">
-            <div className="inline-block text-md text-white/50 border border-white/50 rounded-lg py-1 px-2 shadow-md hover:bg-white/50 hover:translate-y-0.5 hover:text-gray-500 hover:border-gray-400 transition-all duration-500">
+            <div className="hidden lg:inline-block text-md text-white/50 border border-white/50 rounded-lg py-1 px-2 shadow-md hover:bg-white/50 hover:translate-y-0.5 hover:text-gray-500 hover:border-gray-400 transition-all duration-500">
               Home
             </div>
           </Link>
@@ -27,7 +27,7 @@ export default function Exibition_Works() {
           {/* row 1 */}
           <div className="flex gap-3 w-full">
             {/* picture 1 */}
-            <div className="group relative aspect-3/1 w-full overflow-hidden rounded-sm">
+            <div className="group relative aspect-video md:aspect-3/1 w-full overflow-hidden rounded-sm">
               <video controls preload="none" className="absolute inset-0 scale-101 h-full w-full object-cover" autoPlay loop muted playsInline>
                 <source src="/exhibition/主視覺影片.mp4" type="video/mp4" />
               </video>
@@ -41,9 +41,9 @@ export default function Exibition_Works() {
             </div>
           </div>
           {/* row 2 */}
-          <div className="flex gap-3 w-full">
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-3 w-full">
             {/* picture 1 */}
-            <div className="group relative aspect-3/4 w-full flex-1 min-w-0 overflow-hidden rounded-sm">
+            <div className="group relative col-span-3 md:col-span-1 aspect-3/4 w-full flex-1 min-w-0 overflow-hidden rounded-sm">
               <video
                 src="/exhibition/1.mp4"
                 autoPlay
@@ -76,7 +76,7 @@ export default function Exibition_Works() {
                 </p>
               </div>
             </div>
-            {/*  3picture */}
+            {/*  picture 3 */}
             <div className="group relative aspect-3/4 w-full flex-1 min-w-0 overflow-hidden rounded-sm">
               <video
                 src="/exhibition/3.mp4"
@@ -111,7 +111,7 @@ export default function Exibition_Works() {
               </div>
             </div>
             {/* picture 5 */}
-            <div className="group relative aspect-3/4 w-full flex-1 min-w-0 overflow-hidden rounded-sm">
+            <div className="group relative col-span-3 md:col-span-1 aspect-3/4 w-full flex-1 min-w-0 overflow-hidden rounded-sm">
               <video
                 src="/exhibition/5.mp4"
                 autoPlay
@@ -129,13 +129,14 @@ export default function Exibition_Works() {
             </div>
           </div>
 
-
-          <ScrollVelocity
-            texts={['Built with', 'p5.js']}
-            velocity={100}
-            numCopies={10}
-            className="custom-scroll-text text-gray-600 text-md"
-          />
+          <div className="overflow-hidden">
+            <ScrollVelocity
+              texts={['Built with', 'p5.js']}
+              velocity={50}
+              numCopies={20}
+              className="custom-scroll-text text-white/20 text-md"
+            />
+          </div>
 
 
           {/* row 3 */}

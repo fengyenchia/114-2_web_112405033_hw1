@@ -12,7 +12,7 @@ export default function Programming_Project() {
         <div className="flex justify-between">
           <div className="inline-block font-bold text-2xl">Programming Project</div>
           <Link href="../">
-            <div className="inline-block text-md text-white/50 border border-white/50 rounded-lg py-1 px-2 shadow-md hover:bg-white/50 hover:translate-y-0.5 hover:text-gray-500 hover:border-gray-400 transition-all duration-500">
+            <div className="hidden lg:inline-block text-md text-white/50 border border-white/50 rounded-lg py-1 px-2 shadow-md hover:bg-white/50 hover:translate-y-0.5 hover:text-gray-500 hover:border-gray-400 transition-all duration-500">
               Home
             </div>
           </Link>
@@ -23,13 +23,13 @@ export default function Programming_Project() {
         <div className="grid grid-cols-1 gap-6 w-full">
           {/* card 1 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-3/1 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
+            <div className="group relative aspect-2/1 md:aspect-3/1 w-full overflow-hidden bg-black/60 hover:bg-black/80 transition-all duration-800 rounded-lg border border-white/70">
               <Image
                 src="/pragramming/p5jsWebsite.png"
                 alt="bg"
                 fill
                 loading="eager"
-                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover transition-all duration-800 ease-in-out group-hover:scale-110 group-hover:brightness-75"
               />
             </div>
             <div className="">
@@ -57,13 +57,13 @@ export default function Programming_Project() {
           </div>
           {/* card 2 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-3/1 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
+            <div className="group relative aspect-2/1 md:aspect-3/1 w-full overflow-hidden bg-black/60 hover:bg-black/80 transition-all duration-800 rounded-lg border border-white/70">
               <Image
                 src="/pragramming/p5js.png"
                 alt="bg"
                 fill
                 loading="eager"
-                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover transition-all duration-800 ease-in-out group-hover:scale-110 group-hover:brightness-75"
               />
             </div>
             <div className="">
@@ -91,13 +91,14 @@ export default function Programming_Project() {
 
           {/* card 3 */}
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
-            <div className="group relative aspect-3/1 w-full overflow-hidden bg-black/80 hover:bg-black/70 transition-all duration-800 rounded-sm border border-white/70">
+            <div className="group relative aspect-2/1 md:aspect-3/1 w-full overflow-hidden bg-black/60 hover:bg-black/80 transition-all duration-800 rounded-lg border border-white/70">
               <Image
                 src="/pragramming/js.png"
                 alt="bg"
                 fill
                 loading="eager"
-                className="object-cover mask-b-from-0% mask-b-to-100% transition-all duration-800 ease-in-out group-hover:scale-110"
+                className="object-cover transition-all duration-800 ease-in-out group-hover:scale-110 group-hover:brightness-75"
+           
               />
             </div>
             <div className="">

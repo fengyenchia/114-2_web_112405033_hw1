@@ -2,7 +2,9 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
+
+
 
 /* Slight global polish; most styling via Tailwind utilities. */
 :root {
@@ -47,7 +49,7 @@ body {
 }
 
 body {
-  background: #fff;
+  background: transparent;
   /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
   font-family: 'noto Sans', 'Courier New', monospace;
 }
@@ -56,7 +58,7 @@ body {
   background: rgb(255,226,226,1);
 }
 
-@theme inline {
+/* @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -97,7 +99,7 @@ body {
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-}
+} */
 
 .dark {
   --background: oklch(0.145 0 0);
@@ -133,7 +135,7 @@ body {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
@@ -143,7 +145,7 @@ body {
   html {
     @apply font-sans;
   }
-}
+} */
 
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -153,4 +155,33 @@ body {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+  animation: slide-in-right 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.fade-in {
+  animation: fade-in 220ms ease-out both;
 }
