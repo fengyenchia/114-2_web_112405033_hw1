@@ -8,7 +8,7 @@ import ScrollVelocity from '@/components/ScrollVelocity';
 export default function Exibition_Works() {
 
   return (
-    <div className="custom-scrollbar w-full h-full p-8 rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
+    <div className="custom-scrollbar w-full h-full p-4 md:p-8 rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
 
       <div className="flex flex-col gap-6 text-gray-600 w-full">
         {/* Exibition Works */}
@@ -134,7 +134,7 @@ export default function Exibition_Works() {
               texts={['Built with', 'p5.js']}
               velocity={50}
               numCopies={20}
-              className="custom-scroll-text text-white/20 text-md"
+              className="custom-scroll-text text-white/40 text-md"
             />
           </div>
 

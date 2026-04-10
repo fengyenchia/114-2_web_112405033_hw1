@@ -54,7 +54,7 @@ export default function RootLayout({
           </div>
 
           {/* footer(手機、平板) */}
-          <div className="lg:hidden flex items-center justify-around gap-3 text-[20px] text-white py-4 bg-white/20">
+          <div className="lg:hidden flex items-center justify-around gap-3 text-[20px] text-white py-4 backdrop-blur-sm rounded-b-lg">
             <Link
               href="https://www.instagram.com/yenchia._.0504/"
               target="_blank"

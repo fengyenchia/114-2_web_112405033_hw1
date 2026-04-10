@@ -28,16 +28,16 @@ export default function Menu2() {
                 <div className="flex gap-2">
 
                     <div className="flex w-full justify-evenly text-[20px] text-white py-3">
-                        <Link href="https://www.instagram.com/yenchia._.0504/" target="/blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
+                        <Link href="https://www.instagram.com/yenchia._.0504" target="_blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
                             <IoLogoInstagram />
                         </div></Link>
-                        <Link href="https://www.instagram.com/yenchia._.0504/" target="/blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
+                        <Link href="mailto:yanjia20050504@gmail.com" target="_blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
                             <IoMail />
                         </div></Link>
-                        <Link href="https://www.instagram.com/yenchia._.0504/" target="/blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
+                        <Link href="https://www.linkedin.com/in/fengyenchia" target="_blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
                             <IoLogoLinkedin />
                         </div></Link>
-                        <Link href="https://www.instagram.com/yenchia._.0504/" target="/blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
+                        <Link href="https://github.com/fengyenchia" target="_blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
                             <IoLogoGithub />
                         </div></Link>
                     </div>

@@ -13,7 +13,7 @@ export default function Three_D_Works() {
   const [showVideo_2, setShowVideo_2] = useState(false);
   const [showVideo_3, setShowVideo_3] = useState(false);
   return (
-    <div className="custom-scrollbar w-full h-full p-8 rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
+    <div className="custom-scrollbar w-full h-full p-4 md:p-8 rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
 
       {/* open video_1 */}
       {showVideo_1 && (

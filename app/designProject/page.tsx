@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function DesignProject() {
   return (
-    <div className="custom-scrollbar w-full h-full p-8 rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
+    <div className="custom-scrollbar w-full h-full p-4 md:p-8 rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
 
       <div className="flex flex-col gap-6 text-gray-600 w-full">
         {/* DesignProject */}
@@ -66,7 +66,6 @@ export default function DesignProject() {
                 <p className="text-gray-500">美學概論</p>
               </div>
               <div className="text-gray-400 mt-2 text-sm">
-                <p className="inline-block bg-red-50/80 border-0 border-red-50/50 rounded-full shadow-md shadow-red-100/50 px-2 mb-4 mr-2">gather town</p>
                 <p className="inline-block bg-red-50/80 border-0 border-red-50/50 rounded-full shadow-md shadow-red-100/50 px-2 mb-4 mr-2">八角理論</p>
                 <p className="inline-block bg-red-50/80 border-0 border-red-50/50 rounded-full shadow-md shadow-red-100/50 px-2 mb-4 mr-2">化學</p>
               </div>
@@ -193,13 +192,13 @@ export default function DesignProject() {
         <div className="flex-col w-full h-full">
           <p className="text-gray-600 text-lg font-bold mb-3">角色</p>
           <div className="flex gap-6">
-            <div className="bg-white w-[80px] h-[80px] rounded-full border-4 border-x-red-200 border-y-red-100 shadow-md shadow-red-200 overflow-hidden flex justify-center items-center hover:rotate-360 transition-all duration-800">
+            <div className="bg-white w-full md:w-[80px] h-full md:h-[80px] rounded-full border-4 border-x-red-200 border-y-red-100 shadow-md shadow-red-200 overflow-hidden flex justify-center items-center hover:rotate-360 transition-all duration-800">
               <Image src="/avatar.png" alt="avatar" loading="eager" width={80} height={80} />
             </div>
-            <div className="bg-white w-[80px] h-[80px] rounded-full border-4 border-x-gray-400 border-y-gray-100 shadow-md shadow-red-200 overflow-hidden flex justify-center items-center hover:rotate-360 transition-all duration-800">
+            <div className="bg-white w-full md:w-[80px] h-full md:h-[80px] rounded-full border-4 border-x-gray-400 border-y-gray-100 shadow-md shadow-red-200 overflow-hidden flex justify-center items-center hover:rotate-360 transition-all duration-800">
               <Image src="/avatar2.png" alt="avatar" loading="eager" width={80} height={80} />
             </div>
-            <div className="bg-white w-[80px] h-[80px] rounded-full border-4 border-x-purple-300 border-y-purple-100 shadow-md shadow-red-200 overflow-hidden flex justify-center items-center hover:rotate-360 transition-all duration-800">
+            <div className="bg-white w-full md:w-[80px] h-full md:h-[80px] rounded-full border-4 border-x-purple-300 border-y-purple-100 shadow-md shadow-red-200 overflow-hidden flex justify-center items-center hover:rotate-360 transition-all duration-800">
               <Image src="/avatar3.png" alt="avatar" loading="eager" width={80} height={80} />
             </div>
           </div>

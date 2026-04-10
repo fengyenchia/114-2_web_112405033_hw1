@@ -31,7 +31,7 @@ const TypedLogoLoop: ComponentType<LogoLoopPropsLocal> = LogoLoop as ComponentTy
 
 export default function About() {
   return (
-    <div className="custom-scrollbar w-full h-full p-8 rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
+    <div className="custom-scrollbar w-full h-full p-4 md:p-8 rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
 
       <div className="flex flex-col gap-6 text-gray-600 w-full">
         {/* About */}
@@ -52,9 +52,9 @@ export default function About() {
         <div className="flex flex-col gap-4 w-full">
           {/* Education */}
           <div className="flex flex-col md:flex-row gap-2 md:gap-8 border border-gray-500/50 rounded-md px-4 py-2 w-full">
-            <div className="flex flex-row md:flex-col gap-2 md:gap-0 items-center  text-gray-500 text-md md:w-24 shrink-0 pb-2 md:pb-0 border-b border-gray-500/50 md:border-0">
+            <div className="flex flex-row md:flex-col gap-2 md:gap-0 items-baseline md:items-left  text-gray-500 text-md md:w-24 shrink-0 pb-2 md:pb-0 border-b border-gray-500/50 md:border-0">
               <p className="font-bold my-2">Education</p>
-              <p className="text-xs text-gray-400">in NCCU</p>
+              <p className="text-xs my-2 text-gray-400">in NCCU</p>
             </div>
             <div className="text-gray-500 text-md md:border-s border-gray-500/50 grow md:ps-4 md:space-y-4">
               <div className="group">
@@ -74,9 +74,9 @@ export default function About() {
 
           {/* Experience */}
           <div className="flex flex-col md:flex-row gap-2 md:gap-8 border border-gray-500/50 rounded-md px-4 py-2 w-full">
-            <div className="flex flex-row md:flex-col gap-2 md:gap-0 items-center text-gray-500 text-md md:w-24 shrink-0 pb-2 md:pb-0 border-b border-gray-500/50 md:border-0">
+            <div className="flex flex-row md:flex-col gap-2 md:gap-0 items-baseline md:items-left text-gray-500 text-md md:w-24 shrink-0 pb-2 md:pb-0 border-b border-gray-500/50 md:border-0">
               <p className="font-bold my-2">Experience</p>
-              <p className="text-xs text-gray-400">in NCCU</p>
+              <p className="text-xs my-2 text-gray-400">in NCCU</p>
             </div>
             <div className="text-gray-500 text-md md:border-s border-gray-500/50 grow md:ps-4 md:space-y-4">
               <div className="group">

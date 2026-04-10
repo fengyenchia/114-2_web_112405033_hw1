@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Programming_Project() {
 
   return (
-    <div className="custom-scrollbar w-full h-full p-8 rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
+    <div className="custom-scrollbar w-full h-full p-4 md:p-8 rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
 
       <div className="flex flex-col gap-6 text-gray-600 w-full">
         {/* Programming Project */}
