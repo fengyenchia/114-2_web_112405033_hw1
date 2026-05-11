@@ -12,6 +12,7 @@ export default function Three_D_Works() {
   const [showVideo_1, setShowVideo_1] = useState(false);
   const [showVideo_2, setShowVideo_2] = useState(false);
   const [showVideo_3, setShowVideo_3] = useState(false);
+  const [showVideo_4, setShowVideo_4] = useState(false);
   return (
     <div className="custom-scrollbar w-full h-full p-4 md:p-8 rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
 
@@ -26,7 +27,6 @@ export default function Three_D_Works() {
               src="/video/1.mp4"
               autoPlay
               loop
-              muted
               playsInline
               className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 openLayer scale-90 rounded-lg"
             />
@@ -47,7 +47,6 @@ export default function Three_D_Works() {
               src="/video/2.mp4"
               autoPlay
               loop
-              muted
               playsInline
               className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 openLayer scale-90 rounded-lg"
             />
@@ -68,13 +67,32 @@ export default function Three_D_Works() {
               src="/video/3.mp4"
               autoPlay
               loop
-              muted
               playsInline
               className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 openLayer scale-90 lg:scale-60 rounded-lg"
             />
             {/* close */}
             <div className="absolute top-[5%] right-[5%] text-md text-gray-200 hover:text-gray-400 transition-all duration-400"
               onClick={() => setShowVideo_3(false)}><RiCloseLargeFill /></div>
+          </div>
+        </div>
+      )}
+      {/* open video_4 */}
+      {showVideo_4 && (
+        <div
+          className="absolute inset-0 z-1 h-full w-full bg-black/60 rounded-lg"
+          onClick={() => setShowVideo_4(false)}>
+          {/* 防止點擊影片時也關閉 */}
+          <div onClick={(e) => e.stopPropagation()}>
+            <video
+              src="/video/4.mp4"
+              autoPlay
+              loop
+              playsInline
+              className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 openLayer scale-90 rounded-lg"
+            />
+            {/* close */}
+            <div className="absolute top-[5%] right-[5%] text-md text-gray-200 hover:text-gray-400 transition-all duration-400"
+              onClick={() => setShowVideo_4(false)}><RiCloseLargeFill /></div>
           </div>
         </div>
       )}
@@ -136,6 +154,26 @@ export default function Three_D_Works() {
               <div className="absolute inset-0 hover:bg-white/30 opacity-0 hover:opacity-100 hover:scale-150 transition-all duration-500 aspect-video h-full w-full"><ImEnlarge2 className="w-full h-full scale-10" /></div>
             </div>
           </div>
+          {/* video 4 */}
+          <div className="flex flex-col md:flex-row gap-3 w-full">
+            {/* text */}
+            <div className="content-end md:w-[40%]">
+              <p className="text-gray-500 text-sm">2026</p>
+              <p className="font-bold text-md md:text-lg text-gray-600">Procedural LOGO Sequence Animation</p>
+            </div>
+            {/* video */}
+            <div className="relative aspect-video w-full overflow-hidden rounded-lg shadow-md shadow-red-200/50 cursor-pointer" onClick={() => setShowVideo_4(true)}>
+              <video
+                src="/video/4.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 hover:bg-white/30 opacity-0 hover:opacity-100 hover:scale-150 transition-all duration-500 aspect-video h-full w-full"><ImEnlarge2 className="w-full h-full scale-10" /></div>
+            </div>
+          </div>
           {/* video 3 */}
           <div className="flex flex-col md:flex-row gap-3 w-full">
             {/* text */}
@@ -159,6 +197,47 @@ export default function Three_D_Works() {
 
 
         </div>
+
+        {/* 3D Printing Models */}
+        <hr className="border-gray-500/20" />
+        <div className="flex justify-between">
+          <div className="inline-block font-bold text-xl">3D Printing Models</div>
+        </div>
+        {/* pictures */}
+        <div className="flex flex-row gap-3 w-full">
+          <div className="relative aspect-3/4 w-1/3 overflow-hidden rounded-lg shadow-md shadow-red-200/50">
+            <Image
+              src="/3d/2.jpg"
+              alt="bg"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              loading="eager"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative aspect-3/4 w-1/3 overflow-hidden rounded-lg shadow-md shadow-red-200/50">
+            <Image
+              src="/3d/3.jpg"
+              alt="bg"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              loading="eager"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative aspect-3/4 w-1/3 overflow-hidden rounded-lg shadow-md shadow-red-200/50">
+            <Image
+              src="/3d/1.jpg"
+              alt="bg"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              loading="eager"
+              className="object-cover"
+            />
+          </div>
+        </div>
+
+
       </div>
     </div>
   );

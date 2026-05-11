@@ -15,11 +15,21 @@ export default function Menu2() {
     return (
         <div className="hidden lg:block p-8">
             <div className="custom-scrollbar bg-red-50/0 backdrop-blur-2xl p-8 w-xs h-full rounded-2xl shadow-lg overflow-y-auto">
+                {/* avatar */}
                 <div className="flex justify-center items-center w-full">
-                    <div className="bg-white w-[80px] h-[80px] rounded-full border-4 border-x-red-200 border-y-red-100 ring-4 ring-red-100 shadow-lg shadow-red-200 overflow-hidden flex justify-center items-center">
-                        <Image src="/avatar.png" alt="avatar" loading="eager" width={80} height={80} />
+                    {/* 外層容器 */}
+                    <div className="group relative bg-white w-[80px] h-[80px] rounded-full border-4 border-x-red-200 border-y-red-100 ring-4 ring-red-100 shadow-lg shadow-red-200 overflow-hidden">
+                        {/* 預設 */}
+                        <div className="absolute inset-0 flex justify-center items-center transition-opacity duration-700 group-hover:opacity-0">
+                            <Image src="/avatar.png" alt="avatar" width={80} height={80} className="object-cover" />
+                        </div>
+                        {/* Hover */}
+                        <div className="absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-700 group-hover:opacity-100">
+                            <Image src="/avatar4.jpg" alt="avatar" width={80} height={80} className="object-cover" />
+                        </div>
                     </div>
-                </div>
+                </div>             
+               
 
                 <div className="text-center font-medium text-white mt-5">馮 妍 嘉</div>
                 <div className="text-center text-white pb-2">NCCU AD x DCT</div>

@@ -25,10 +25,19 @@ export default function MobileMenu() {
             {open ? <IoClose className="text-2xl" /> : <IoMenu className="text-2xl" />}
           </button>
         </div>
-
-        <div className="bg-white w-[56px] h-[56px] rounded-full border-4 border-x-red-200 border-y-red-100 ring-4 ring-red-100 shadow-lg shadow-red-200 overflow-hidden flex justify-center items-center">
-          <Image src="/avatar.png" alt="avatar" loading="eager" width={56} height={56} />
+       
+        {/* avatar */}
+        <div className="group relative bg-white w-[56px] h-[56px] rounded-full border-4 border-x-red-200 border-y-red-100 ring-4 ring-red-100 shadow-lg shadow-red-200 overflow-hidden">
+            {/* 預設 */}
+            <div className="absolute inset-0 flex justify-center items-center transition-opacity duration-700 group-hover:opacity-0">
+                <Image src="/avatar.png" alt="avatar" width={80} height={80} className="object-cover" />
+            </div>
+            {/* Hover */}
+            <div className="absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-700 group-hover:opacity-100">
+                <Image src="/avatar4.jpg" alt="avatar" width={80} height={80} className="object-cover" />
+            </div>
         </div>
+
 
         <div className="flex flex-col gap-1 text-white ml-3">
           <div className="font-medium">馮 妍 嘉</div>

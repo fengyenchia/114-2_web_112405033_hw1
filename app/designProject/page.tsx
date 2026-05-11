@@ -185,6 +185,33 @@ export default function DesignProject() {
               </Link>
             </div>
           </div>
+          {/* card 7 */}
+          <div className="col-span-2 flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
+            <div className="group relative aspect-3/1 w-full overflow-hidden bg-black/70 hover:bg-black/80 transition-all duration-800 rounded-sm border border-white/70">
+              <Image
+                src="/design/figma_2.png"
+                alt="bg"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                loading="eager"
+                className="object-cover transition-all duration-800 ease-in-out group-hover:scale-110 group-hover:brightness-75"
+              />
+            </div>
+            <div className="">
+              <div>
+                <p className="text-gray-600 font-bold text-lg">Figma 作品</p>
+                <p className="text-gray-500">解謎遊戲 - 完美人設的代價</p>
+              </div>
+              <div className="text-gray-400 mt-2 text-sm">
+                <p className="inline-block bg-red-50/80 border-0 border-red-50/50 rounded-full shadow-md shadow-red-100/50 px-2 mb-4 mr-2">社群媒體焦慮</p>
+              </div>
+              <Link href="https://www.figma.com/proto/bdzyi2jP0SbqMH5EG1bjW8/%E5%B0%88%E9%A1%8C?node-id=434-2320&p=f&viewport=2486%2C385%2C0.31&t=eBxwKEDJ3WgyVrOh-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=434%3A2320&page-id=4%3A7" target="/blank">
+                <div className="w-full font-medium text-center mt-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-500 rounded-md transition-colors duration-200">
+                  查看專案
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
 
 
