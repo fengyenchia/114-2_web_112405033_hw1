@@ -25,6 +25,39 @@ export default function Programming_Project() {
           <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
             <div className="group relative aspect-2/1 md:aspect-3/1 w-full overflow-hidden bg-black/60 hover:bg-black/80 transition-all duration-800 rounded-lg border border-white/70">
               <Image
+                src="/pragramming/website.png"
+                alt="bg"
+                fill
+                loading="eager"
+                className="object-cover transition-all duration-800 ease-in-out group-hover:scale-110 group-hover:brightness-75"
+              />
+            </div>
+            <div className="">
+              <div>
+                <p className="text-gray-600 font-bold text-lg">personal website</p>
+                <p className="mt-1 text-gray-400 text-xs">2026</p>
+              </div>
+              <div className="text-gray-500 mt-2 text-sm">
+                <p className="mb-2">用 Next.js 框架開發的個人網站，並搭配 React, Tailwind CSS 來製作。</p>
+              </div>
+              <div className="flex justify-around gap-6">
+                <Link href="https://114-2-web-112405033-hw1.vercel.app/" target="/blank" className="block w-full">
+                  <div className="w-full font-medium text-center mt-3 py-2 px-auto bg-gray-100 hover:bg-gray-200 text-gray-500 rounded-md transition-colors duration-200">
+                    查看網站
+                  </div>
+                </Link>
+                <Link href="https://github.com/fengyenchia/114-2_web_112405033_hw1" target="/blank" className="block w-full">
+                  <div className="w-full font-medium text-center mt-3 py-2 px-auto bg-red-100 hover:bg-red-200 text-gray-500 rounded-md transition-colors duration-200">
+                    Github
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+          {/* card 1 */}
+          <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
+            <div className="group relative aspect-2/1 md:aspect-3/1 w-full overflow-hidden bg-black/60 hover:bg-black/80 transition-all duration-800 rounded-lg border border-white/70">
+              <Image
                 src="/pragramming/p5jsWebsite.png"
                 alt="bg"
                 fill

@@ -66,7 +66,7 @@ export default function About() {
               <div className="group">
                 <div className="md:ps-2 py-2 rounded-md group-hover:bg-white/20 group-hover:translate-x-1 transition-all duration-500">
                   <p className="font-bold">國立政治大學</p>
-                  <p className="text-xs md:text-sm text-gray-500">數位內容與科技學士學位學程 | 2023 - Now</p>
+                  <p className="text-xs md:text-sm text-gray-500">數位內容與科技學士學位學程 | 2024 - Now</p>
                 </div>
               </div>
             </div>
