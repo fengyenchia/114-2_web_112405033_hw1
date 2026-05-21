@@ -186,6 +186,34 @@ export default function DesignProject() {
             </div>
           </div>
           {/* card 7 */}
+          <div className="flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
+            <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/70 hover:bg-black/80 transition-all duration-800 rounded-sm border border-white/70">
+              <Image
+                src="/design/ar.png"
+                alt="bg"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                loading="eager"
+                className="object-cover transition-all duration-800 ease-in-out group-hover:scale-110 group-hover:brightness-75"
+              />
+            </div>
+            <div className="">
+              <div>
+                <p className="text-gray-600 font-bold text-lg">AR 遊戲專題</p>
+                <p className="text-gray-500">創意與設計 - 小組專題 金獎</p>
+              </div>
+              <div className="text-gray-400 mt-2 text-sm">
+                <p className="inline-block bg-red-50/80 border-0 border-red-50/50 rounded-full shadow-md shadow-red-100/50 px-2 mb-4 mr-2">AR</p>
+                <p className="inline-block bg-red-50/80 border-0 border-red-50/50 rounded-full shadow-md shadow-red-100/50 px-2 mb-4 mr-2">Illustrator</p>
+              </div>
+              <Link href="https://drive.google.com/file/d/1BMg7HhCWwqQwmG8YZTqHS4bn-g0yXduX/view?usp=sharing" target="/blank">
+                <div className="w-full font-medium text-center mt-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-500 rounded-md transition-colors duration-200">
+                  查看專案
+                </div>
+              </Link>
+            </div>
+          </div>
+          {/* card 8 */}
           <div className="col-span-2 flex flex-col gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
             <div className="group relative aspect-3/1 w-full overflow-hidden bg-black/70 hover:bg-black/80 transition-all duration-800 rounded-sm border border-white/70">
               <Image
