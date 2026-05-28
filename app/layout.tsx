@@ -25,6 +25,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/avatar.png",
   },
+  openGraph: {
+    title: "馮妍嘉(Feng Yen-Chia) 的作品集",
+    description: "這是我的個人作品集，歡迎瀏覽我的作品！",
+    images: "pragramming/website.png",
+  },
 };
 
 export default function RootLayout({
