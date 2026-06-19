@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link";
 
+
 import type { ComponentType } from "react";
 import LogoLoop from '@/components/LogoLoop';
 import { SiInstagram, SiGmail, SiGithub, SiFacebook, SiLinktree, SiBlender } from 'react-icons/si';
@@ -31,12 +32,12 @@ const TypedLogoLoop: ComponentType<LogoLoopPropsLocal> = LogoLoop as ComponentTy
 
 export default function About() {
   return (
-    <div className="custom-scrollbar w-full h-full p-4 md:p-8 rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
+    <div className="custom-scrollbar w-full h-full p-4 md:p-8 lg:rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
 
-      <div className="flex flex-col gap-6 text-gray-600 w-full">
+      <div className="flex flex-col gap-3 lg:gap-6 text-gray-600 w-full">
         {/* About */}
         <div className="flex justify-between">
-          <div className="inline-block font-bold text-2xl">About</div>
+          <div className="title">About</div>
           <Link href="../">
             <div className="hidden lg:inline-block text-md text-white/50 border border-white/50 rounded-lg py-1 px-2 shadow-md hover:bg-white/50 hover:translate-y-0.5 hover:text-gray-500 hover:border-gray-400 transition-all duration-500">
               Home
@@ -44,7 +45,7 @@ export default function About() {
           </Link>
         </div>
         <hr className="border-gray-500/20" />
-        <div className="text-gray-500 py-0 lg:py-2 text-md leading-relaxed">
+        <div className="text-gray-500 py-0 lg:py-2 text-sm lg:text-md leading-relaxed">
           <p>我是個熱衷於嘗試新事物且喜歡挑戰的人，對我來說，設計的靈感來自生活，我時常將設計與科技結合，透過程式、互動技術或是其他數位工具，讓創意與美的展現有更多可能。我也擅長以簡潔的線條、擬人的物件，搭配可愛的色彩來呈現作品，藉此傳達出活潑卻也讓人眼前一亮的感覺。</p>
         </div>
 
@@ -52,7 +53,7 @@ export default function About() {
         <div className="flex flex-col gap-4 w-full">
           {/* Education */}
           <div className="flex flex-col md:flex-row gap-2 md:gap-8 border border-gray-500/50 rounded-md px-4 py-2 w-full">
-            <div className="flex flex-row md:flex-col gap-2 md:gap-0 items-baseline md:items-left  text-gray-500 text-md md:w-24 shrink-0 pb-2 md:pb-0 border-b border-gray-500/50 md:border-0">
+            <div className="flex flex-row md:flex-col gap-2 md:gap-0 items-baseline md:items-left text-gray-500 text-md md:w-24 shrink-0 pb-2 md:pb-0 border-b border-gray-500/50 md:border-0">
               <p className="font-bold my-2">Education</p>
               <p className="text-xs my-2 text-gray-400">in NCCU</p>
             </div>

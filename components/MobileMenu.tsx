@@ -6,6 +6,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import MobileFooter from "./MobileFooter";
+
 import { IoClose, IoMenu } from "react-icons/io5";
 
 export default function MobileMenu() {
@@ -14,7 +16,7 @@ export default function MobileMenu() {
 
   return (
     <>
-      <div className="lg:hidden sticky top-0 z-10 flex items-center gap-3 bg-red-50/0 backdrop-blur-sm py-6 pl-6 rounded-b-lg w-full shadow-lg">
+      <div className="lg:hidden sticky top-0 flex items-center gap-3 bg-red-50/0 backdrop-blur-sm py-4 pl-6 w-full shadow-lg">
         <div className="absolute top-1/2 right-0 -translate-y-1/2 z-100 pr-4">
           <button
             type="button"
@@ -27,7 +29,7 @@ export default function MobileMenu() {
         </div>
        
         {/* avatar */}
-        <div className="group relative bg-white w-[56px] h-[56px] rounded-full border-4 border-x-red-200 border-y-red-100 ring-4 ring-red-100 shadow-lg shadow-red-200 overflow-hidden">
+        <div className="group relative bg-white w-[40px] h-[40px] rounded-full border-2 border-x-red-200 border-y-red-100 ring-2 ring-red-100 shadow-lg shadow-red-200 overflow-hidden">
             {/* 預設 */}
             <div className="absolute inset-0 flex justify-center items-center transition-opacity duration-700 group-hover:opacity-0">
                 <Image src="/avatar.png" alt="avatar" width={80} height={80} className="object-cover" />
@@ -39,14 +41,14 @@ export default function MobileMenu() {
         </div>
 
 
-        <div className="flex flex-col gap-1 text-white ml-3">
+        <div className="flex flex-col text-white ml-3">
           <div className="font-medium">馮 妍 嘉</div>
           <div className="text-sm text-white/80">NCCU AD x DCT</div>
         </div>
       </div>
 
       {open && (
-        <div className="lg:hidden fixed inset-0 z-50">
+        <div className="lg:hidden fixed inset-0 z-50 bg-black/5">
           <div
             className="absolute inset-0 backdrop-blur-sm">
           </div>
@@ -61,7 +63,7 @@ export default function MobileMenu() {
 
                 {/* page button */}
                 <div className="custom-scrollbar absolute h-full w-full overflow-y-auto py-6 px-4 mt-20">
-                  <div className="flex flex-col gap-5">
+                  <div className="h-auto gap-36 flex flex-col">
                     <div className="text-center text-white font-medium flex flex-col gap-4">
                       <Link href="/" onClick={closeMenu}>
                         <div className="bg-red-50/30 text-shadow-md text-shadow-gray-600/20 border border-white/50 py-[8px] rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Home</div>
@@ -81,9 +83,10 @@ export default function MobileMenu() {
                       <Link href="/3dWorks" onClick={closeMenu}>
                         <div className="bg-red-50/30 text-shadow-md text-shadow-gray-600/20 border border-white/50 py-[8px] rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">3D Works</div>
                       </Link>
-                      {/* <Link href="/grid" onClick={closeMenu}>
-                        <div className="bg-red-50/30 text-shadow-md text-shadow-gray-600/20 border border-white/50 py-[8px] rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Grid</div>
-                      </Link> */}
+                    </div>
+                    {/* Mobile Footer */}
+                    <div>
+                      <MobileFooter />
                     </div>
                   </div>
                 </div>

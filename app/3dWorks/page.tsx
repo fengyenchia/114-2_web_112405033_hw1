@@ -14,7 +14,7 @@ export default function Three_D_Works() {
   const [showVideo_3, setShowVideo_3] = useState(false);
   const [showVideo_4, setShowVideo_4] = useState(false);
   return (
-    <div className="custom-scrollbar w-full h-full p-4 md:p-8 rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
+    <div className="custom-scrollbar w-full h-full p-4 md:p-8 lg:rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
 
       {/* open video_1 */}
       {showVideo_1 && (
@@ -100,10 +100,10 @@ export default function Three_D_Works() {
 
 
 
-      <div className="flex flex-col gap-6 text-gray-600 w-full">
+      <div className="flex flex-col gap-3 lg:gap-6 text-gray-600 w-full">
         {/* Three_D_Works */}
         <div className="flex justify-between">
-          <div className="inline-block font-bold text-2xl">3D Works</div>
+          <div className="title">3D Works</div>
           <Link href="../">
             <div className="hidden lg:inline-block text-md text-white/50 border border-white/50 rounded-lg py-1 px-2 shadow-md hover:bg-white/50 hover:translate-y-0.5 hover:text-gray-500 hover:border-gray-400 transition-all duration-500">
               Home

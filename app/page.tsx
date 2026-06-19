@@ -8,7 +8,7 @@ import TrueFocus from '@/components/TrueFocus';
 export default function Home() {
 
   return (
-    <div className="w-full h-full px-4 py-8 md:p-8 rounded-xl">
+    <div className="w-full h-full px-4 py-8 md:p-8 lg:rounded-xl">
 
       <div className="flex flex-col justify-center items-center gap-8 md:gap-12 w-full h-full text-center text-gray-500">
         <div className="font-bold text-4xl">
