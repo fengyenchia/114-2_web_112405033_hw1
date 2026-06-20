@@ -10,7 +10,15 @@ import MobileFooter from "./MobileFooter";
 
 import { IoClose, IoMenu } from "react-icons/io5";
 
-export default function MobileMenu() {
+interface Profile {
+  id: string;
+  name: string;
+  description: string;
+  imgSrc: string;
+  motto: string;
+}
+
+export default function MobileMenu({ profile }: { profile: Profile []}) {
   const [open, setOpen] = useState(false);
   const closeMenu = () => setOpen(false);
 
@@ -32,7 +40,7 @@ export default function MobileMenu() {
         <div className="group relative bg-white w-10 h-10 rounded-full border-2 border-x-red-200 border-y-red-100 ring-2 ring-red-100 shadow-lg shadow-red-200 overflow-hidden">
             {/* 預設 */}
             <div className="absolute inset-0 flex justify-center items-center transition-opacity duration-700 group-hover:opacity-0">
-                <Image src="/avatar.png" alt="avatar" width={80} height={80} className="object-cover" />
+                <Image src={profile[0].imgSrc} alt="avatar" width={80} height={80} className="object-cover" />
             </div>
             {/* Hover */}
             <div className="absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-700 group-hover:opacity-100">
@@ -42,8 +50,8 @@ export default function MobileMenu() {
 
 
         <div className="flex flex-col text-white ml-3">
-          <div className="font-medium">馮 妍 嘉</div>
-          <div className="text-sm text-white/80">NCCU AD x DCT</div>
+          <div className="font-medium">{profile[0].name}</div>
+          <div className="text-sm text-white/80">{profile[0].description}</div>
         </div>
       </div>
 

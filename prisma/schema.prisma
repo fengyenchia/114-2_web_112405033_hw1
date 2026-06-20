@@ -1,0 +1,80 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+// prisma/schema.prisma
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL") // 👈 告訴 Prisma 6：在 migrate 遷移時走 5432 直連通道，防止卡死
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Profile {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  imgSrc      String
+  motto       String
+}
+
+model About_Content {
+  id          String   @id @default(uuid())
+  description String
+}
+
+model About_Education {
+  id          String   @id @default(uuid())
+  school      String
+  department  String
+  year        String
+}
+
+model About_Experience {
+  id          String   @id @default(uuid())
+  role        String
+  description String?
+  year        String
+}
+
+model About_Skill {
+  id          String   @id @default(uuid())
+  category    String
+  tags        String[]
+}
+
+model DesignProject {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  imgSrc      String
+  tags         String[]
+  url         String
+}
+
+model ProgrammingProject {
+  id                 String   @id @default(uuid())
+  title              String
+  year               String
+  description        String
+  imgSrc             String
+  website1_url       String
+  website2_url       String
+  website2_url_word  String
+}
+
+model ThreeDWorks {
+  id                 String   @id @default(uuid())
+  title              String
+  year               String
+  videoUrl           String
+  aspect             String?
+  scaleClass         String?
+  enlargeScale       String?
+}

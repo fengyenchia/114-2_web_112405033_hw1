@@ -5,6 +5,8 @@ import "./globals.css";
 import Menu from "../components/Menu"
 import MobileMenu from "../components/MobileMenu";
 
+import { db } from "@/lib/db";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,11 +30,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  // 從資料庫撈取第一筆 Profile 資料（個人網站通常只有一筆資料）
+  const profile = await db.profile.findMany();
+
   return (
     <html
       lang="en"
@@ -42,8 +48,8 @@ export default function RootLayout({
         <div className="flex flex-1 min-h-0 flex-col lg:flex-row">
           
           {/* 左邊 */}
-          <MobileMenu />
-          <Menu />
+          <MobileMenu profile={profile} />
+          <Menu profile={profile} />
 
           {/* 右邊 */}
           <div className="flex flex-1 min-h-0 justify-center lg:py-8 px-0 lg:px-0 lg:pr-8 w-full">

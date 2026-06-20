@@ -1,12 +1,11 @@
 "use client"
 import { useState } from 'react';
-// import Image from "next/image";
 import { ImEnlarge2 } from "react-icons/im";
 import { RiCloseLargeFill } from "react-icons/ri";
 import FadeIn from "@/components/fadeIn";
 
 interface VideoCardProps {
-  src: string;
+  videoUrl: string;
   year: string;
   title: string;
   aspect?: string; // 支援 aspect-video 或 aspect-square
@@ -15,7 +14,9 @@ interface VideoCardProps {
 }
 
 export default function Video({ 
-  src, year, title, 
+  videoUrl,
+  year, 
+  title, 
   aspect = "aspect-video", 
   scaleClass = "scale-90",
   enlargeScale = "scale-10"
@@ -32,7 +33,7 @@ export default function Video({
         >
           <div onClick={(e) => e.stopPropagation()}>
             <video
-              src={src}
+              src={videoUrl}
               autoPlay
               loop
               playsInline
@@ -62,7 +63,7 @@ export default function Video({
             onClick={() => setIsOpen(true)}
           >
             <video
-              src={src}
+              src={videoUrl}
               autoPlay
               loop
               muted
