@@ -15,6 +15,15 @@ const programmingData = [
     "href_2_word": "Github"
   },
   {
+    "src": "/programming/web.png",
+    "title": "Web 程式設計 - 遊戲專題",
+    "year": "2026",
+    "description": "我在這個專題中，負責撰寫程式、設計其中一個小關卡、以及整合整體流程。",
+    "href_1": "https://final-web-design-dusky.vercel.app/",
+    "href_2": "https://github.com/Sou-Hisa/finalWebDesign",
+    "href_2_word": "Github"
+  },
+  {
     "src": "/programming/p5jsWebsite.png",
     "title": "side project - p5.js 作品管理網頁",
     "year": "2026",
@@ -34,13 +43,13 @@ const programmingData = [
   },
   {
     "src": "/programming/js.png",
-    "title": "Javascript 遊戲專題",
+    "title": "Javascript 應用程式設計 - 遊戲專題",
     "year": "2025",
     "description": "我在這個專題中，負責技術（javascript、p5.js）的部分",
     "href_1": "https://fengyenchia.github.io/js_final_project/public/00/",
     "href_2": "https://github.com/fengyenchia/js_final_project",
     "href_2_word": "Github"
-  }
+  },
 ];
 
 
