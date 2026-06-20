@@ -14,11 +14,11 @@ export default function Menu2() {
 
     return (
         <div className="hidden lg:block p-8">
-            <div className="custom-scrollbar bg-red-50/0 backdrop-blur-2xl p-8 w-xs h-full rounded-2xl shadow-lg overflow-y-auto">
+            <div className="custom-scrollbar bg-red-50/0 backdrop-blur-2xl p-8 w-xs h-full rounded-outer shadow-lg overflow-y-auto">
                 {/* avatar */}
                 <div className="flex justify-center items-center w-full">
                     {/* 外層容器 */}
-                    <div className="group relative bg-white w-[80px] h-[80px] rounded-full border-4 border-x-red-200 border-y-red-100 ring-4 ring-red-100 shadow-lg shadow-red-200 overflow-hidden">
+                    <div className="group relative bg-white w-20 h-20 rounded-full border-4 border-x-red-200 border-y-red-100 ring-4 ring-red-100 shadow-lg shadow-red-200 overflow-hidden">
                         {/* 預設 */}
                         <div className="absolute inset-0 flex justify-center items-center transition-opacity duration-700 group-hover:opacity-0">
                             <Image src="/avatar.png" alt="avatar" width={80} height={80} className="object-cover" />
@@ -55,23 +55,20 @@ export default function Menu2() {
 
                 <div className="text-center text-white font-medium pt-2 flex flex-col gap-2">
                     <Link href="/about" className="">
-                        <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">About</div>
+                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 p-4 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">About</div>
                     </Link>
                     <Link href="/designProject">
-                        <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Design Project</div>
+                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 p-4 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Design Project</div>
                     </Link>
                     <Link href="/programmingProject">
-                        <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Programming Project</div>
+                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 p-4 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Programming Project</div>
                     </Link>
                     <Link href="/exhibitionWorks">
-                        <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/10">Exhibition Works</div>
+                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 p-4 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/10">Exhibition Works</div>
                     </Link>
                     <Link href="/3dWorks">
-                        <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">3D Works</div>
+                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 p-4 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">3D Works</div>
                     </Link>
-                    {/* <Link href="/grid">
-                        <div className="bg-red-50/10 text-shadow-md text-shadow-gray-600/20 border border-white/50 p-[16px] mt-2 rounded-md shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Grid</div>
-                    </Link> */}
                 </div>
 
             </div>

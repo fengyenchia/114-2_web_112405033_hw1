@@ -1,9 +1,7 @@
 "use client"
 
-import Image from "next/image"
-import Link from "next/link";
-
 import TrueFocus from '@/components/TrueFocus';
+import TextType from '@/components/TextType';
 
 export default function Home() {
 
@@ -21,8 +19,17 @@ export default function Home() {
             pauseBetweenAnimations={1.5}
           />
         </div>
-        <div className=" font-bold text-4xl">Portfolio</div>
-        <div className="text-center text-gray-500 pb-2 text-md md:text-lg">[對我來說，將設計與程式結合，做出有趣的互動作品，是一件很好玩的事]</div>
+        <div className="text-center text-gray-500 pb-2 text-md md:text-lg">
+          <TextType 
+            text={["對我來說,將設計與程式結合，做出有趣的互動作品,是一件很好玩的事"]}
+            typingSpeed={80}
+            pauseDuration={1500}
+            showCursor
+            cursorCharacter="_"
+            deletingSpeed={50}
+            cursorBlinkDuration={0.5}
+          />
+        </div>
       </div>
 
 

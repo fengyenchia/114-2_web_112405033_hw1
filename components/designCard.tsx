@@ -13,10 +13,10 @@ interface DesignCardProps {
 export default function DesignCard({ src, title, category, tags, href }: DesignCardProps) {
   return (
     <Link href={href} target="_blank" className="block">
-      <div className="flex flex-col gap-4 lg:gap-8 border border-gray-500/10 rounded-md p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
+      <div className="flex flex-col gap-4 lg:gap-8 border border-primary/10 rounded-inner p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
         
         {/* 圖片區塊 */}
-        <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/70 hover:bg-black/80 transition-all duration-800 rounded-sm border border-white/70">
+        <div className="group relative aspect-5/3 w-full overflow-hidden bg-black/70 hover:bg-black/80 transition-all duration-800 rounded-inner border border-white/70">
           <Image
             src={src}
             alt={title}
@@ -28,12 +28,12 @@ export default function DesignCard({ src, title, category, tags, href }: DesignC
         </div>
 
         <div>
-          <div>
-            <p className="text-gray-600 font-bold text-lg">{title}</p>
-            <p className="text-gray-500">{category}</p>
+          <div className="flex flex-col">
+            <p className="subtitle pb-0!">{title}</p>
+            <p className="text-primary text-sm">{category}</p>
           </div>
 
-          <div className="text-gray-400 mt-2 text-sm">
+          <div className="text-accent mt-2 text-sm">
             {tags.map((tag, index) => (
               <p 
                 key={index} 
@@ -44,9 +44,9 @@ export default function DesignCard({ src, title, category, tags, href }: DesignC
             ))}
           </div>
 
-            <div className="lg:hidden w-full font-medium text-center mt-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-500 rounded-md transition-colors duration-200">
-              查看專案
-            </div>
+          <div className="lg:hidden w-full font-medium text-center py-2 bg-gray-100 hover:bg-gray-200 text-primary rounded-inner transition-all duration-600">
+            查看專案
+          </div>
         </div>
 
       </div>  
