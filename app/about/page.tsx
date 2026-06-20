@@ -160,7 +160,7 @@ export default function About() {
 
         {/* Logo Loop */}
         <div className="mt-auto pt-5 flex justify-center w-full overflow-hidden">
-          <div className="w-full max-w-xl overflow-hidden">
+          <div className="w-full max-w-2xl overflow-hidden">
             <div className="h-10 text-primary">
               <TypedLogoLoop
                 logos={socialLogos}

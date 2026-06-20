@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Yen-Chia's Portfolio",
   description: "Yen-Chia's 的數位名片",
   icons: {
-    icon: "/avatar.png",
+    icon: "/favicon.ico",
   },
   openGraph: {
     title: "馮妍嘉(Feng Yen-Chia) 的作品集",

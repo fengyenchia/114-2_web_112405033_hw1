@@ -15,6 +15,7 @@ export default function Three_D_Works() {
   const [showVideo_2, setShowVideo_2] = useState(false);
   const [showVideo_3, setShowVideo_3] = useState(false);
   const [showVideo_4, setShowVideo_4] = useState(false);
+  const [showVideo_5, setShowVideo_5] = useState(false);
   return (
     <div className="custom-scrollbar w-full h-full p-4 md:p-8 lg:rounded-xl bg-white/10 overflow-y-auto overflow-x-hidden flex flex-col gap-10">
 
@@ -75,6 +76,26 @@ export default function Three_D_Works() {
             {/* close */}
             <div className="absolute top-[5%] right-[5%] text-md text-gray-200 hover:text-accent transition-all duration-400"
               onClick={() => setShowVideo_3(false)}><RiCloseLargeFill /></div>
+          </div>
+        </div>
+      )}
+      {/* open video_5 */}
+      {showVideo_5 && (
+        <div
+          className="absolute inset-0 z-1 h-full w-full bg-black/60 rounded-inner"
+          onClick={() => setShowVideo_5(false)}>
+          {/* 防止點擊影片時也關閉 */}
+          <div onClick={(e) => e.stopPropagation()}>
+            <video
+              src="/video/5.mp4"
+              autoPlay
+              loop
+              playsInline
+              className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 openLayer scale-90 lg:scale-60 rounded-inner"
+            />
+            {/* close */}
+            <div className="absolute top-[5%] right-[5%] text-md text-gray-200 hover:text-accent transition-all duration-400"
+              onClick={() => setShowVideo_5(false)}><RiCloseLargeFill /></div>
           </div>
         </div>
       )}
@@ -170,6 +191,28 @@ export default function Three_D_Works() {
               <div className="relative aspect-video w-full overflow-hidden rounded-inner shadow-md shadow-red-200/50 cursor-pointer" onClick={() => setShowVideo_4(true)}>
                 <video
                   src="/video/4.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 hover:bg-white/30 opacity-0 hover:opacity-100 hover:scale-150 transition-all duration-500 aspect-video h-full w-full"><ImEnlarge2 className="w-full h-full scale-10" /></div>
+              </div>
+            </div>
+          </FadeIn>
+          {/* video 5 */}
+          <FadeIn>
+            <div className="flex flex-col md:flex-row gap-3 w-full">
+              {/* text */}
+              <div className="content-end md:w-[40%]">
+                <p className="text-primary text-sm">2026</p>
+                <p className="subtitle pb-0!">Procedural Countdown Clock Animation</p>
+              </div>
+              {/* video */}
+              <div className="relative aspect-video w-full overflow-hidden rounded-inner shadow-md shadow-red-200/50 cursor-pointer" onClick={() => setShowVideo_5(true)}>
+                <video
+                  src="/video/5.mp4"
                   autoPlay
                   loop
                   muted
