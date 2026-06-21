@@ -67,7 +67,7 @@ export default function AboutClient({ aboutContent, aboutEducation, aboutExperie
             <hr className="border-primary/20" />
             <FadeIn>
               <div className="bg-red-50/30 rounded-inner py-2 px-4 lg:px-4 text-primary text-sm lg:text-base leading-relaxed">
-                <p>{aboutContent[0].description}</p>
+                <p className="whitespace-pre-line">{aboutContent[0].description}</p>
               </div>
             </FadeIn>
     
@@ -80,18 +80,24 @@ export default function AboutClient({ aboutContent, aboutEducation, aboutExperie
                     <p className="font-bold my-0 lg:my-2">Education</p>
                   </div>
                 </FadeIn>
-    
-                <FadeIn>
-                  <div className="text-primary text-sm md:text-md md:border-s border-primary/50 grow md:ps-4 md:space-y-4">
+
+                <FadeIn className="grow w-full">
+                  <div className="text-primary text-sm md:text-md md:border-s border-primary/50 grow md:ps-4 space-y-2 md:space-y-4 w-full flex flex-col">
                     {aboutEducation.map((edu) => (
-                        <div className="group" key={edu.id}>
-                        <div className="md:ps-2 py-1 lg:py-2 rounded-inner group-hover:bg-white/20 group-hover:translate-x-1 transition-all duration-500">
+                      <div className="w-full" key={edu.id}>
+                        <div className="flex flex-col w-full md:ps-2 py-1 lg:py-2 rounded-inner hover:bg-white/20 hover:translate-x-1 hover:pr-2 transition-all duration-500">
+                          <div className="flex justify-between w-full">
                             <p className="font-bold">{edu.school}</p>
-                            <p className="text-xs md:text-sm text-primary">
-                            {edu.department} | {edu.year}
+                            <p className="text-xs md:text-sm text-primary/80">
+                              {edu.year}
                             </p>
+                          </div>
+                          <p className="text-xs md:text-sm text-primary/90">
+                            {edu.department}
+                          </p>
+
                         </div>
-                        </div>
+                      </div>
                     ))}
                   </div>
                 </FadeIn>
@@ -105,20 +111,29 @@ export default function AboutClient({ aboutContent, aboutEducation, aboutExperie
                   </div>
                 </FadeIn>
                 <FadeIn>
-                  <div className="text-primary text-sm md:text-md md:border-s border-primary/50 grow md:ps-4 md:space-y-4">
-                        {aboutExperience.map((exp) => (
-                            <div className="group" key={exp.id}>
-                                <div className="md:ps-2 py-1 lg:py-2 rounded-inner group-hover:bg-white/20 group-hover:translate-x-1 transition-all duration-500">
-                                    <p className="font-bold">{exp.role}</p>
-                                    <p className="text-xs md:text-sm text-primary">
-                                        {exp.year}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
+                  <div className="text-primary text-sm md:text-md md:border-s border-primary/50 grow md:ps-4 space-y-4 flex flex-col w-full">
+                    {aboutExperience.map((exp) => (
+                      <div className="group w-full" key={exp.id}>
+                        <div className="flex flex-col gap-1 md:ps-2 py-1 lg:py-2 rounded-inner group-hover:bg-white/20 group-hover:translate-x-1 group-hover:pr-2 transition-all duration-500 w-full">
+                          
+                          <div className="flex justify-between items-baseline w-full gap-4">
+                            <p className="font-bold text-left">{exp.role}</p>
+                            <p className="text-end text-xs md:text-sm text-primary/80 shrink-0">
+                              {exp.year}
+                            </p>
+                          </div>
+                          
+                          <p className="text-xs md:text-sm text-primary/90 text-left pr-2 md:pr-4 whitespace-pre-line">
+                            {exp.description}
+                          </p>
+                          
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </FadeIn>
               </div>
+
             </div>
     
             {/* Tag */}

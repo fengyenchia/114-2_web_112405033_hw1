@@ -42,7 +42,14 @@ export default async function Three_D_Works() {
           <div className="flex flex-row gap-3 w-full">
             {printingImages.map((imgSrc, idx) => (
               <div key={idx} className="relative aspect-3/4 w-1/3 overflow-hidden rounded-inner shadow-md shadow-red-200/50">
-                <Image src={imgSrc} alt="3d model" fill sizes="(max-width: 768px) 100vw, 33vw" loading="eager" className="object-cover" />
+                <Image 
+                  src={imgSrc} 
+                  alt="3d model" 
+                  fill 
+                  sizes="(max-width: 768px) 100vw, 33vw" 
+                  loading="eager" 
+                  className="object-cover hover:scale-105 transition-all duration-600" 
+                />
               </div>
             ))}
           </div>

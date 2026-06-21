@@ -9,7 +9,7 @@
 datasource db {
   provider  = "postgresql"
   url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL") // 👈 告訴 Prisma 6：在 migrate 遷移時走 5432 直連通道，防止卡死
+  directUrl = env("DIRECT_URL") // 告訴 Prisma 6：在 migrate 遷移時走 5432 直連通道，防止卡死
 }
 
 generator client {
@@ -78,3 +78,6 @@ model ThreeDWorks {
   scaleClass         String?
   enlargeScale       String?
 }
+
+// 更新新的資料庫：npx prisma migrate dev --name add_[資料庫名稱(全小寫)]
+// 更新原有資料庫欄位：npx prisma migrate dev --name add_[資料庫名稱(全小寫)]_[新增的欄位名稱]

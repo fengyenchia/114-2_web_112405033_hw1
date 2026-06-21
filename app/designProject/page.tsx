@@ -65,7 +65,7 @@ export default async function DesignProject() {
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading="eager"
-                className="object-cover"
+                className="object-cover hover:scale-105 transition-all duration-600"
               />
             </div>
           </FadeIn>

@@ -63,19 +63,19 @@ export default function Menu({ profile }: { profile: Profile []} ) {
 
                 <div className="text-center text-white font-medium pt-2 flex flex-col gap-2">
                     <Link href="/about" className="">
-                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 p-4 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">About</div>
+                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 px-4 py-3 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">About</div>
                     </Link>
                     <Link href="/designProject">
-                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 p-4 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Design Project</div>
+                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 px-4 py-3 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Design Project</div>
                     </Link>
                     <Link href="/programmingProject">
-                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 p-4 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Programming Project</div>
+                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 px-4 py-3 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Programming Project</div>
                     </Link>
                     <Link href="/exhibitionWorks">
-                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 p-4 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/10">Exhibition Works</div>
+                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 px-4 py-3 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/10">Exhibition Works</div>
                     </Link>
                     <Link href="/3dWorks">
-                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 p-4 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">3D Works</div>
+                        <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 px-4 py-3 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">3D Works</div>
                     </Link>
                 </div>
 

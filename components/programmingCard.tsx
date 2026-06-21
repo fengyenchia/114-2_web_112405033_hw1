@@ -14,7 +14,7 @@ interface DesignCardProps {
 
 export default function ProgrammingCard({ imgSrc, title, year, description, website1_url, website2_url, website2_url_word }: DesignCardProps) {
   return (
-    <div className="flex flex-col gap-4 lg:gap-8 border border-primary/10 rounded-inner p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
+    <div className="flex flex-col gap-4 lg:gap-ˊ border border-primary/10 rounded-inner p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
       <div className="group relative aspect-2/1 md:aspect-3/1 w-full overflow-hidden bg-black/60 hover:bg-black/80 transition-all duration-800 rounded-inner">
         <Image
           src={imgSrc}
@@ -25,9 +25,9 @@ export default function ProgrammingCard({ imgSrc, title, year, description, webs
         />
       </div>
       <div className="flex flex-col">
-        <div>
-          <p className="subtitle mb-0!">{title}</p>
-          <p className="text-accent text-xs">{year}</p>
+        <div className="flex justify-between items-center w-full">
+          <p className="subtitle pb-0!">{title}</p>
+          <p className="inline-block text-accent text-sm bg-red-50/80 border-0 border-red-50/50 rounded-full shadow-md shadow-red-100/50 px-2">{year}</p>
         </div>
         <div className="text-primary my-2 text-sm">
           <p className="">{description}</p>
