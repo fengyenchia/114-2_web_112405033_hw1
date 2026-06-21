@@ -14,12 +14,13 @@ interface DesignCardProps {
 
 export default function ProgrammingCard({ imgSrc, title, year, description, website1_url, website2_url, website2_url_word }: DesignCardProps) {
   return (
-    <div className="flex flex-col gap-4 lg:gap-ˊ border border-primary/10 rounded-inner p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
+    <div className="flex flex-col gap-4 lg:gap-6 border border-primary/10 rounded-inner p-4 w-full shadow-lg hover:scale-101 transition-all duration-500">
       <div className="group relative aspect-2/1 md:aspect-3/1 w-full overflow-hidden bg-black/60 hover:bg-black/80 transition-all duration-800 rounded-inner">
         <Image
           src={imgSrc}
           alt="bg"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           loading="eager"
           className="object-cover transition-all duration-800 ease-in-out group-hover:scale-110 group-hover:brightness-75"
         />

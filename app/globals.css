@@ -41,7 +41,7 @@ body {
 
 body {
   background: transparent;
-  font-family: 'noto Sans', 'Courier New', monospace;
+  font-family: 'noto Sans', sans-serif;
 }
 
 ::selection {

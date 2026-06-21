@@ -40,11 +40,11 @@ export default function MobileMenu({ profile }: { profile: Profile []}) {
         <div className="group relative bg-white w-10 h-10 rounded-full border-2 border-x-red-200 border-y-red-100 ring-2 ring-red-100 shadow-lg shadow-red-200 overflow-hidden">
             {/* 預設 */}
             <div className="absolute inset-0 flex justify-center items-center transition-opacity duration-700 group-hover:opacity-0">
-                <Image src={profile[0].imgSrc} alt="avatar" width={80} height={80} className="object-cover" />
+                <Image src={profile[0].imgSrc} alt="avatar" loading="eager" width={80} height={80} className="object-cover" />
             </div>
             {/* Hover */}
             <div className="absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-700 group-hover:opacity-100">
-                <Image src="/avatar4.jpg" alt="avatar" width={80} height={80} className="object-cover" />
+                <Image src="/avatar4.jpg" alt="avatar" loading="eager" width={80} height={80} className="object-cover" />
             </div>
         </div>
 
