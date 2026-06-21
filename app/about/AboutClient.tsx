@@ -15,7 +15,7 @@ interface About_Education {
 interface About_Experience {
   id: string;
   role: string;
-  description: string;
+  description: string | null;
   year: string;
 }
 
