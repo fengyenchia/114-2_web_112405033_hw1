@@ -1,17 +1,9 @@
-"use client"
+"use client";
+
 import Image from "next/image"
 import ScrollVelocity from '@/components/ScrollVelocity';
 import HomeButton from "@/components/homeButton";
 import FadeIn from "@/components/fadeIn";
-
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Exhibition Works",
-  alternates: {
-    canonical: "/exhibitionWorks",
-  },
-};
 
 // 1. 定義單個作品項目的型別架構
 interface WorkItem {
