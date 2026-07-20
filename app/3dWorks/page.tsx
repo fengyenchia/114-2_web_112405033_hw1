@@ -8,6 +8,16 @@ import Image from "next/image"
 import HomeButton from '@/components/homeButton';
 import FadeIn from "@/components/fadeIn";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "3d Works",
+  alternates: {
+    canonical: "/3dWorks",
+  },
+};
+
+
 const printingImages = ["/3d/2.jpg", "/3d/3.jpg", "/3d/1.jpg"];
 
 export default async function Three_D_Works() {

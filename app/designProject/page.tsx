@@ -8,6 +8,14 @@ import Image from "next/image"
 import HomeButton from "@/components/homeButton";
 import FadeIn from "@/components/fadeIn";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Design Project",
+  alternates: {
+    canonical: "/designProject",
+  },
+};
 
 export default async function DesignProject() {
   const designProject = await db.designProject.findMany();

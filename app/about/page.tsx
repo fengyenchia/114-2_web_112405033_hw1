@@ -3,6 +3,15 @@ export const dynamic = 'force-dynamic';
 import { db } from "@/lib/db";
 import AboutClient from "./AboutClient";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  alternates: {
+    canonical: "/about",
+  },
+};
+
 export default async function About() {
   const aboutContent = await db.about_Content.findMany();
   const aboutEducation = await db.about_Education.findMany({

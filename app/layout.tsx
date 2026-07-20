@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.fengyenchia.com"),
   title: "Yen-Chia's Portfolio",
   description: "Yen-Chia's 的數位名片",
   icons: {
@@ -28,7 +29,6 @@ export const metadata: Metadata = {
     description: "這是我的個人作品集，歡迎瀏覽我的作品！",
     images: "pragramming/website.png",
   },
-  canonical: 
 };
 
 export default async function RootLayout({

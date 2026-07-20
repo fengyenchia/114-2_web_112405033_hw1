@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
+
 export const dynamic = 'force-dynamic';
 
 import { db } from "@/lib/db";
 import HomeClient from "./HomeClient";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default async function Home() {
   const profile = await db.profile.findMany();

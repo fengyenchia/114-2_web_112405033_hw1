@@ -6,6 +6,14 @@ import ProgrammingProjectClient from "./ProgrammingProjectClient";
 import HomeButton from "@/components/homeButton";
 import FadeIn from "@/components/fadeIn";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Programming Project",
+  alternates: {
+    canonical: "/programmingProject",
+  },
+};
 
 export default async function Programming_Project() {
   const programmingProject = await db.programmingProject.findMany({
