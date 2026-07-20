@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     description: "這是我的個人作品集，歡迎瀏覽我的作品！",
     images: "pragramming/website.png",
   },
+  canonical: 
 };
 
 export default async function RootLayout({
