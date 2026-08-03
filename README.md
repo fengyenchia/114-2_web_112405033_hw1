@@ -11,7 +11,7 @@
 
 此專案為馮妍嘉的個人作品集網站，展示網頁開發、互動設計、視覺設計、3D 建模等領域的技能與創作成果。網站採用 Next.js 的 App Router 與 Server Components 技術，結合 Tailwind CSS，製作出一個響應式網頁。後端則使用 Supabase 提供的 PostgreSQL 資料庫，並透過 Prisma Client 進行資料管理與操作。
 
-**正式作品集網站**：[https://114-2-web-112405033-hw1.vercel.app/](https://114-2-web-112405033-hw1.vercel.app/)
+[**正式作品集網站**](https://www.fengyenchia.com/)
 
 ## 技術棧與架構
 

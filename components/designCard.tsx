@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import Link from "next/link";
 
 interface DesignCardProps {
   title: string;
@@ -48,9 +47,9 @@ export default function DesignCard({ imgSrc, title, description, tag, url }: Des
 
 
           <div className="w-full font-medium text-center py-2 bg-gray-100 hover:bg-gray-200 text-primary rounded-inner transition-all duration-600">
-            <Link href={url} target="_blank" className="block">
+            <a href={url} target="_blank" rel="noreferrer noopener" className="block">
             查看專案
-            </Link>
+            </a>
           </div>
         </div>
 

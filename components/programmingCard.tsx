@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import Link from "next/link";
 
 interface DesignCardProps {
   imgSrc: string;
@@ -34,16 +33,16 @@ export default function ProgrammingCard({ imgSrc, title, year, description, webs
           <p className="">{description}</p>
         </div>
         <div className="flex justify-around gap-4 lg:gap-6">
-          <Link href={website1_url} target="_blank" className="block w-full">
+          <a href={website1_url} target="_blank" rel="noreferrer noopener" className="block w-full">
             <div className="w-full font-medium text-center mt-3 py-2 px-auto bg-gray-100 hover:bg-gray-200 text-primary rounded-inner transition-all duration-600">
               查看網站
             </div>
-          </Link>
-          <Link href={website2_url} target="_blank" className="block w-full">
+          </a>
+          <a href={website2_url} target="_blank" rel="noreferrer noopener" className="block w-full">
             <div className="w-full font-medium text-center mt-3 py-2 px-auto bg-red-100 hover:bg-red-200 text-primary rounded-inner transition-all duration-600">
               {website2_url_word}
             </div>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

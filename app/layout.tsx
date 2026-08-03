@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Menu from "../components/Menu"
 import MobileMenu from "../components/MobileMenu";
+import { ViewTransition } from "react";
 
 import { db } from "@/lib/db";
 
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "馮妍嘉(Feng Yen-Chia) 的作品集",
     description: "這是我的個人作品集，歡迎瀏覽我的作品！",
-    images: "pragramming/website.png",
+    images: "/og-image.png",
   },
 };
 
@@ -46,7 +47,8 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} min-h-dvh lg:overflow-hidden antialiased bg-[url('/bg-3.png')] lg:bg-[url('/bg-2.png')] bg-center bg-cover bg-no-repeat`}
     >
       <body className="flex min-h-dvh flex-col overflow-x-hidden lg:overflow-hidden">
-        <div className="flex flex-1 min-h-0 flex-col lg:flex-row">
+        {/* view transitions 動畫 */}
+          <div className="flex flex-1 min-h-0 flex-col lg:flex-row">
           
           {/* 左邊 */}
           <MobileMenu profile={profile} />
@@ -55,15 +57,18 @@ export default async function RootLayout({
           {/* 右邊 */}
           <div className="flex flex-1 min-h-0 justify-center lg:py-8 px-0 lg:px-0 lg:pr-8 w-full">
             <div className="flex w-full min-h-0 justify-center bg-red-50/0 backdrop-blur-2xl lg:p-4 lg:rounded-2xl shadow-lg overflow-y-auto">
-
-              {children}
-
+              <ViewTransition
+                name="page-content"
+                update={{ default: "none", "page-navigation": "page-navigation" }}
+              >
+                {children}
+              </ViewTransition>
             </div>
           </div>
 
           {/* footer(手機、平板) */}
           {/* <MobileFooter /> */}
-        </div>
+          </div>
 
       </body>
     </html>

@@ -46,35 +46,35 @@ export default function Menu({ profile }: { profile: Profile []} ) {
                 <div className="flex gap-2">
 
                     <div className="flex w-full justify-evenly text-[20px] text-white py-3">
-                        <Link href="https://www.instagram.com/yenchia._.0504" target="_blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
+                        <a href="https://www.instagram.com/yenchia._.0504" target="_blank" rel="noreferrer noopener"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
                             <IoLogoInstagram />
-                        </div></Link>
-                        <Link href="mailto:yanjia20050504@gmail.com" target="_blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
+                        </div></a>
+                        <a href="mailto:yanjia20050504@gmail.com"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
                             <IoMail />
-                        </div></Link>
-                        <Link href="https://www.linkedin.com/in/fengyenchia" target="_blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
+                        </div></a>
+                        <a href="https://www.linkedin.com/in/fengyenchia" target="_blank" rel="noreferrer noopener"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
                             <IoLogoLinkedin />
-                        </div></Link>
-                        <Link href="https://github.com/fengyenchia" target="_blank"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
+                        </div></a>
+                        <a href="https://github.com/fengyenchia" target="_blank" rel="noreferrer noopener"><div className="border-2 border-white rounded-full p-1.5 hover:bg-white hover:text-red-200 transition duration-300">
                             <IoLogoGithub />
-                        </div></Link>
+                        </div></a>
                     </div>
                 </div>
 
                 <div className="text-center text-white font-medium pt-2 flex flex-col gap-2">
-                    <Link href="/about" className="">
+                    <Link href="/about" transitionTypes={["page-navigation"]} className="">
                         <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 px-4 py-3 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">About</div>
                     </Link>
-                    <Link href="/designProject">
+                    <Link href="/designProject" transitionTypes={["page-navigation"]}>
                         <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 px-4 py-3 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Design Project</div>
                     </Link>
-                    <Link href="/programmingProject">
+                    <Link href="/programmingProject" transitionTypes={["page-navigation"]}>
                         <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 px-4 py-3 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Programming Project</div>
                     </Link>
-                    <Link href="/exhibitionWorks">
+                    <Link href="/exhibitionWorks" transitionTypes={["page-navigation"]}>
                         <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 px-4 py-3 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/10">Exhibition Works</div>
                     </Link>
-                    <Link href="/3dWorks">
+                    <Link href="/3dWorks" transitionTypes={["page-navigation"]}>
                         <div className="bg-red-50/10 text-shadow-md text-shadow-secondary/20 border border-white/50 px-4 py-3 mt-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">3D Works</div>
                     </Link>
                 </div>

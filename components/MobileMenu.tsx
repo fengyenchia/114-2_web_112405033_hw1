@@ -73,22 +73,22 @@ export default function MobileMenu({ profile }: { profile: Profile []}) {
                 <div className="custom-scrollbar absolute h-full w-full overflow-y-auto py-6 px-4 mt-20">
                   <div className="h-auto gap-36 flex flex-col">
                     <div className="text-center text-white font-medium flex flex-col gap-4">
-                      <Link href="/" onClick={closeMenu}>
+                      <Link href="/" transitionTypes={["page-navigation"]} onClick={closeMenu}>
                         <div className="bg-red-50/30 text-shadow-md text-shadow-secondary/20 border border-white/50 py-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Home</div>
                       </Link>
-                      <Link href="/about" onClick={closeMenu}>
+                      <Link href="/about" transitionTypes={["page-navigation"]} onClick={closeMenu}>
                         <div className="bg-red-50/30 text-shadow-md text-shadow-secondary/20 border border-white/50 py-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">About</div>
                       </Link>
-                      <Link href="/designProject" onClick={closeMenu}>
+                      <Link href="/designProject" transitionTypes={["page-navigation"]} onClick={closeMenu}>
                         <div className="bg-red-50/30 text-shadow-md text-shadow-secondary/20 border border-white/50 py-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Design Project</div>
                       </Link>
-                      <Link href="/programmingProject" onClick={closeMenu}>
+                      <Link href="/programmingProject" transitionTypes={["page-navigation"]} onClick={closeMenu}>
                         <div className="bg-red-50/30 text-shadow-md text-shadow-secondary/20 border border-white/50 py-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Programming Project</div>
                       </Link>
-                      <Link href="/exhibitionWorks" onClick={closeMenu}>
+                      <Link href="/exhibitionWorks" transitionTypes={["page-navigation"]} onClick={closeMenu}>
                         <div className="bg-red-50/30 text-shadow-md text-shadow-secondary/20 border border-white/50 py-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">Exhibition Works</div>
                       </Link>
-                      <Link href="/3dWorks" onClick={closeMenu}>
+                      <Link href="/3dWorks" transitionTypes={["page-navigation"]} onClick={closeMenu}>
                         <div className="bg-red-50/30 text-shadow-md text-shadow-secondary/20 border border-white/50 py-2 rounded-inner shadow-xs shadow-red-100 hover:bg-white/20 transition duration-300">3D Works</div>
                       </Link>
                     </div>
