@@ -7,6 +7,7 @@ import MobileMenu from "../components/MobileMenu";
 import { ViewTransition } from "react";
 
 import { db } from "@/lib/db";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,8 @@ export default async function RootLayout({
   // 從資料庫撈取第一筆 Profile 資料（個人網站通常只有一筆資料）
   const profile = await db.profile.findMany();
 
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html
       lang="en"
@@ -71,6 +74,7 @@ export default async function RootLayout({
           </div>
 
       </body>
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   );
 }
