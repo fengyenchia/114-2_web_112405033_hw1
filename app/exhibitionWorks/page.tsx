@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image"
-import ScrollVelocity from '@/components/ScrollVelocity';
+import ScrollVelocity from '@/app/exhibitionWorks/_components/ScrollVelocity';
 import HomeButton from "@/components/homeButton";
 import FadeIn from "@/components/fadeIn";
 
@@ -104,6 +104,8 @@ export default function Exibition_Works() {
                       {item.type === 'video' ? (
                         <video 
                           src={item.src} 
+                          title={item.alt}
+                          aria-label={item.alt}
                           controls={item.preload === 'none'} 
                           preload={item.preload || 'auto'} 
                           className="absolute inset-0 w-full h-full object-cover scale-101" 
@@ -118,7 +120,7 @@ export default function Exibition_Works() {
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
                           alt={item.alt} 
                           fill 
-                          loading="eager" 
+                          loading="lazy" 
                           className={`object-cover ${item.scale || ''}`} 
                         />
                       )}

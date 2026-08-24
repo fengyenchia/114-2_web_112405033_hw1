@@ -1,7 +1,7 @@
 "use client";
 
-import TextType from "@/components/TextType";
-import TrueFocus from "@/components/TrueFocus";
+import TextType from "@/app/_components/TextType";
+import TrueFocus from "@/app/_components/TrueFocus";
 
 interface Profile {
   id: string;
@@ -19,7 +19,7 @@ export default function HomeClient({ profile }: { profile: Profile[] }) {
             sentence="Yen-Chia, Feng"
             manualMode={false}
             blurAmount={8}
-            borderColor="#ffc9c9"
+            borderColor="var(--color-selection)"
             animationDuration={1.0}
             pauseBetweenAnimations={1.5}
             />

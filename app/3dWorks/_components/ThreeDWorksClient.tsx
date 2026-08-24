@@ -1,6 +1,6 @@
 "use client";
 
-import Video from "@/components/video";
+import Video from "@/app/3dWorks/_components/video";
 
 interface ThreeDWorks {
   id: string;

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 import Menu from "../components/Menu"
@@ -9,15 +9,14 @@ import { ViewTransition } from "react";
 import { db } from "@/lib/db";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const notoSansTC = localFont({
+  src: "../public/fonts/NotoSansTC-VF.ttf",
+  variable: "--font-noto-sans-tc",
+  weight: "100 900",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.fengyenchia.com"),
@@ -46,8 +45,8 @@ export default async function RootLayout({
 
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} min-h-dvh lg:overflow-hidden antialiased bg-[url('/bg-3.png')] lg:bg-[url('/bg-2.png')] bg-center bg-cover bg-no-repeat`}
+      lang="zh-Hant"
+      className={`${notoSansTC.variable} min-h-dvh lg:overflow-hidden antialiased bg-[url('/bg-3.png')] lg:bg-[url('/bg-2.png')] bg-center bg-cover bg-no-repeat`}
     >
       <body className="flex min-h-dvh flex-col overflow-x-hidden lg:overflow-hidden">
         {/* view transitions 動畫 */}

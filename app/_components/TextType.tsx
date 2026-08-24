@@ -1,5 +1,7 @@
 'use client';
 
+/* eslint-disable react-hooks/refs -- dynamic s elements require forwarding a visibility ref. */
+
 import { ElementType, useEffect, useRef, useState, createElement, useMemo, useCallback } from 'react';
 import { gsap } from 'gsap';
 import './TextType.css';
@@ -53,6 +55,9 @@ const TextType = ({
   const [isVisible, setIsVisible] = useState(!startOnVisible);
   const cursorRef = useRef<HTMLSpanElement>(null);
   const containerRef = useRef<HTMLElement>(null);
+  const setContainerRef = useCallback((node: HTMLElement | null) => {
+    containerRef.current = node;
+  }, []);
 
   const textArray = useMemo(() => (Array.isArray(text) ? text : [text]), [text]);
 
@@ -165,6 +170,7 @@ const TextType = ({
     isVisible,
     reverseMode,
     variableSpeed,
+    getRandomSpeed,
     onSentenceComplete
   ]);
 
@@ -174,7 +180,7 @@ const TextType = ({
   return createElement(
     Component,
     {
-      ref: containerRef,
+      ref: setContainerRef,
       className: `text-type ${className}`,
       ...props
     },

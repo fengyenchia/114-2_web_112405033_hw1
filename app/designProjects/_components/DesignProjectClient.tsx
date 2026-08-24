@@ -1,8 +1,8 @@
 "use client";
 
-import DesignCard from "@/components/designCard";
+import DesignCard from "@/app/designProjects/_components/designCard";
 
-interface DesignProject {
+interface DesignProjects {
   id: string;
   title: string;
   description: string;
@@ -11,7 +11,7 @@ interface DesignProject {
   url: string;
 }
 
-export default function DesignProjectClient({ designProject }: { designProject: DesignProject [] }) {
+export default function DesignProjectClient({ designProject }: { designProject: DesignProjects [] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
         {designProject.map((item) => (

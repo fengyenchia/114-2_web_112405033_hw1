@@ -49,7 +49,7 @@ model About_Skill {
   tags        String[]
 }
 
-model DesignProject {
+model DesignProjects {
   id          String   @id @default(uuid())
   title       String
   description String
@@ -58,15 +58,16 @@ model DesignProject {
   url         String
 }
 
-model ProgrammingProject {
+model ProgrammingProjects {
   id                 String   @id @default(uuid())
   title              String
   year               String
   description        String
   imgSrc             String
   website1_url       String
+  website1_url_word  String   @default("查看網站")
   website2_url       String
-  website2_url_word  String
+  website2_url_word  String   @default("Github")
 }
 
 model ThreeDWorks {

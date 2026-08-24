@@ -1,79 +1,52 @@
-"use client"
-import { useState } from 'react';
-import { ImEnlarge2 } from "react-icons/im";
-import { RiCloseLargeFill } from "react-icons/ri";
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { IconArrowsMaximize, IconX } from "@tabler/icons-react";
 import FadeIn from "@/components/fadeIn";
 
 interface VideoCardProps {
   videoUrl: string;
   year: string;
   title: string;
-  aspect?: string; // 支援 aspect-video 或 aspect-square
-  scaleClass?: string; // 支援 lg:scale-60 或 scale-90
-  enlargeScale?: string; // 放大圖示的級距 (如 scale-10 或 scale-6)
+  aspect?: string;
+  scaleClass?: string;
+  enlargeScale?: string;
+  poster?: string;
 }
 
-export default function Video({ 
-  videoUrl,
-  year, 
-  title, 
-  aspect = "aspect-video", 
-  scaleClass = "scale-90",
-  enlargeScale = "scale-10"
-}: VideoCardProps) {
+export default function Video({ videoUrl, year, title, aspect = "aspect-video", scaleClass = "scale-90", enlargeScale = "scale-10", poster = "/og-image.png" }: VideoCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    closeButtonRef.current?.focus();
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isOpen]);
 
   return (
     <>
-      {/* 1. 彈出燈箱 (Modal) */}
       {isOpen && (
-        <div
-          className="absolute inset-0 z-50 h-full w-full bg-black/60 rounded-inner backdrop-blur-sm"
-          onClick={() => setIsOpen(false)}
-        >
-          <div onClick={(e) => e.stopPropagation()}>
-            <video
-              src={videoUrl}
-              autoPlay
-              loop
-              playsInline
-              className={`absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 openLayer rounded-inner ${scaleClass}`}
-            />
-            <div 
-              className="absolute top-[5%] right-[5%] text-md text-gray-200 hover:text-accent transition-all duration-400 cursor-pointer"
-              onClick={() => setIsOpen(false)}
-            >
-              <RiCloseLargeFill />
-            </div>
+        <div className="absolute inset-0 z-50 flex items-center justify-center rounded-inner bg-black/60 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label={`${title} 影片預覽`} onMouseDown={() => setIsOpen(false)}>
+          <div className="relative max-h-full max-w-full" onMouseDown={(event) => event.stopPropagation()}>
+            <video src={videoUrl} poster={poster} title={title} aria-label={title} autoPlay loop controls playsInline className={`max-h-[80vh] max-w-full rounded-inner ${scaleClass}`} />
+            <button ref={closeButtonRef} type="button" aria-label={`關閉 ${title} 影片`} onClick={() => setIsOpen(false)} className="absolute right-3 top-3 inline-flex items-center justify-center rounded-inner bg-black/45 p-2 text-white transition hover:bg-black/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"><IconX size={20} /></button>
           </div>
         </div>
       )}
 
-      {/* 2. 影片卡片本體 */}
       <FadeIn>
-        <div className="flex flex-col md:flex-row gap-3 w-full">
-          {/* 文字說明 */}
-          <div className="content-end md:w-[40%]">
-            <p className="text-primary text-sm">{year}</p>
-            <p className="subtitle pb-0!">{title}</p>
-          </div>
-          {/* 影片預覽區域 */}
-          <div 
-            className={`relative w-full overflow-hidden rounded-inner shadow-md shadow-red-200/50 cursor-pointer ${aspect}`} 
-            onClick={() => setIsOpen(true)}
-          >
-            <video
-              src={videoUrl}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <div className={`absolute inset-0 hover:bg-white/30 opacity-0 hover:opacity-100 hover:scale-150 transition-all duration-500 h-full w-full flex justify-center items-center ${aspect}`}>
-              <ImEnlarge2 className={`text-white ${enlargeScale}`} />
-            </div>
-          </div>
+        <div className="flex w-full flex-col gap-3 md:flex-row">
+          <div className="content-end md:w-[40%]"><p className="text-sm text-primary">{year}</p><p className="subtitle pb-0!">{title}</p></div>
+          <button type="button" aria-label={`開啟 ${title} 影片`} aria-haspopup="dialog" onClick={() => setIsOpen(true)} className={`group relative w-full overflow-hidden rounded-inner text-left shadow-md shadow-red-200/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary ${aspect}`}>
+            <video src={videoUrl} poster={poster} title={title} aria-label={title} autoPlay loop muted playsInline className="absolute inset-0 h-full w-full object-cover" />
+            <span className={`absolute inset-0 flex h-full w-full items-center justify-center opacity-0 transition-all duration-500 group-hover:scale-150 group-hover:bg-white/30 group-hover:opacity-100 ${aspect}`}><IconArrowsMaximize className={`text-white ${enlargeScale}`} aria-hidden="true" /></span>
+          </button>
         </div>
       </FadeIn>
     </>

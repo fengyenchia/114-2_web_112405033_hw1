@@ -26,25 +26,23 @@ interface About_Skill {
 }
 
 import type { ComponentType } from "react";
-import LogoLoop from '@/components/LogoLoop';
-import SkillCard from '@/components/skillCard';
+import LogoLoop from '@/app/about/_components/LogoLoop';
+import SkillCard from '@/app/about/_components/skillCard';
 import HomeButton from '@/components/homeButton';
 import FadeIn from "@/components/fadeIn";
-import { SiInstagram, SiGmail, SiGithub, SiFacebook, SiLinktree, SiBlender } from 'react-icons/si';
-import { IoLogoLinkedin, IoCode, IoGlobe } from "react-icons/io5";
-import { FaXTwitter } from "react-icons/fa6";
+import { IconBrandBlender, IconBrandFacebook, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconBrandLinktree, IconBrandX, IconCode, IconMail, IconWorld } from "@tabler/icons-react";
 
 const socialLogos = [
-  { node: <SiInstagram />, title: "Instagram", href: "https://www.instagram.com/yenchia._.0504" },
-  { node: <SiGmail />, title: "Email", href: "mailto:yanjia20050504@gmail.com" },
-  { node: <IoLogoLinkedin />, title: "LinkedIn", href: "https://www.linkedin.com/in/fengyenchia" },
-  { node: <SiGithub />, title: "GitHub", href: "https://github.com/fengyenchia" },
-  { node: <FaXTwitter />, title: "X", href: "https://x.com/fengyenchia" },
-  { node: <SiFacebook />, title: "facebook", href: "https://www.facebook.com/fengyenchia0504/" },
-  { node: <IoCode />, title: "openproccessing", href: "https://openprocessing.org/user/522490/" },
-  { node: <IoGlobe />, title: "my website", href: "http://fengyenchia.github.io/my-page/" },
-  { node: <SiBlender />, title: "my 3d website", href: "https://112405033.weebly.com/" },
-  { node: <SiLinktree />, title: "linkTree", href: "https://linktr.ee/yenchia" },
+  { node: <IconBrandInstagram />, title: "Instagram", href: "https://www.instagram.com/yenchia._.0504" },
+  { node: <IconMail />, title: "Email", href: "mailto:yanjia20050504@gmail.com" },
+  { node: <IconBrandLinkedin />, title: "LinkedIn", href: "https://www.linkedin.com/in/fengyenchia" },
+  { node: <IconBrandGithub />, title: "GitHub", href: "https://github.com/fengyenchia" },
+  { node: <IconBrandX />, title: "X", href: "https://x.com/fengyenchia" },
+  { node: <IconBrandFacebook />, title: "facebook", href: "https://www.facebook.com/fengyenchia0504/" },
+  { node: <IconCode />, title: "openproccessing", href: "https://openprocessing.org/user/522490/" },
+  { node: <IconWorld />, title: "my website", href: "http://fengyenchia.github.io/my-page/" },
+  { node: <IconBrandBlender />, title: "my 3d website", href: "https://112405033.weebly.com/" },
+  { node: <IconBrandLinktree />, title: "linkTree", href: "https://linktr.ee/yenchia" },
 ];
 
 type LogoLoopPropsLocal = {
@@ -183,7 +181,7 @@ export default function AboutClient({ aboutContent, aboutEducation, aboutExperie
                     hoverSpeed={0}
                     scaleOnHover
                     fadeOut
-                    fadeOutColor="#ffffff00"
+                    fadeOutColor="transparent"
                   />
                 </div>
               </div>

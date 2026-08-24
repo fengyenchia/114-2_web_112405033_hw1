@@ -8,8 +8,8 @@ async function main() {
   await prisma.about_Education.deleteMany(); // 清除舊資料，確保種子資料乾淨
   await prisma.about_Experience.deleteMany(); // 清除舊資料，確保種子資料乾淨
   await prisma.about_Skill.deleteMany(); // 清除舊資料，確保種子資料乾淨
-  await prisma.designProject.deleteMany(); // 清除舊資料，確保種子資料乾淨
-  await prisma.programmingProject.deleteMany(); // 清除舊資料，確保種子資料乾淨
+  await prisma.designProjects.deleteMany(); // 清除舊資料，確保種子資料乾淨
+  await prisma.programmingProjects.deleteMany(); // 清除舊資料，確保種子資料乾淨
   await prisma.threeDWorks.deleteMany(); // 清除舊資料，確保種子資料乾淨
 
   await prisma.profile.createMany({
@@ -89,7 +89,7 @@ async function main() {
     ],
   });
 
-  await prisma.designProject.createMany({
+  await prisma.designProjects.createMany({
     data: [
         {
         "imgSrc": "/design/character.png",
@@ -150,7 +150,7 @@ async function main() {
     ],
   });
   
-  await prisma.programmingProject.createMany({
+  await prisma.programmingProjects.createMany({
     data: [
         {
           "imgSrc": "/programming/website.png",

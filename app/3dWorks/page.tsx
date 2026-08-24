@@ -1,7 +1,7 @@
-export const dynamic = 'force-dynamic';
+export const revalidate = 3600;
 
 import { db } from "@/lib/db";
-import ThreeDWorksClient from "./ThreeDWorksClient";
+import ThreeDWorksClient from "./_components/ThreeDWorksClient";
 
 import Image from "next/image"
 
@@ -56,10 +56,10 @@ export default async function Three_D_Works() {
               <div key={idx} className="relative aspect-3/4 w-1/3 overflow-hidden rounded-inner shadow-md shadow-red-200/50">
                 <Image 
                   src={imgSrc} 
-                  alt="3d model" 
+                  alt={`3D 列印模型 ${idx + 1}`} 
                   fill 
                   sizes="(max-width: 768px) 100vw, 33vw" 
-                  loading="eager" 
+                  loading="lazy" 
                   className="object-cover hover:scale-105 transition-all duration-600" 
                 />
               </div>

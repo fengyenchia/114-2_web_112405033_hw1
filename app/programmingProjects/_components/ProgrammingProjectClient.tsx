@@ -1,19 +1,20 @@
 "use client";
 
-import ProgrammingCard from "@/components/programmingCard";
+import ProgrammingCard from "@/app/programmingProjects/_components/programmingCard";
 
-interface ProgrammingProject {
+interface ProgrammingProjects {
   id: string;
   title: string;
   year: string;
   description: string;
   imgSrc: string;
   website1_url: string;
+  website1_url_word?: string;
   website2_url: string;
-  website2_url_word: string;
+  website2_url_word?: string;
 }
 
-export default function ProgrammingProjectClient({ programmingProject }: { programmingProject: ProgrammingProject [] }) {
+export default function ProgrammingProjectClient({ programmingProject }: { programmingProject: ProgrammingProjects [] }) {
   return (
     <div className="grid grid-cols-1 gap-6 w-full">
         {programmingProject.map((item) => (
@@ -24,6 +25,7 @@ export default function ProgrammingProjectClient({ programmingProject }: { progr
             year={item.year}
             description={item.description}
             website1_url={item.website1_url}
+            website1_url_word={item.website1_url_word}
             website2_url={item.website2_url}
             website2_url_word={item.website2_url_word}
           />

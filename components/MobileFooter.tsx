@@ -1,20 +1,15 @@
 "use client";
 import { sendGAEvent } from "@next/third-parties/google";
-import {
-  IoLogoGithub,
-  IoLogoInstagram,
-  IoLogoLinkedin,
-  IoMail,
-} from "react-icons/io5";
+import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconMail } from "@tabler/icons-react";
 
 export default function MobileFooter() {
   return (
-    <div className="lg:hidden flex items-center justify-around gap-3 text-[20px] text-white py-4 backdrop-blur-sm rounded-b-lg">
+    <div className="lg:hidden flex items-center justify-around gap-3 text-[20px] text-white py-4">
       <a
         href="https://www.instagram.com/yenchia._.0504/"
         target="_blank"
         rel="noreferrer noopener"
-        className="border-2 border-white/80 rounded-full p-1.5 transition hover:bg-white hover:text-red-200"
+        className="inline-flex h-10 w-10 items-center justify-center text-white/90 transition hover:text-red-200 hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         onClick={() =>
           sendGAEvent("event", "social_click", {
             platform: "instagram",
@@ -23,11 +18,11 @@ export default function MobileFooter() {
         }
         aria-label="Instagram"
       >
-        <IoLogoInstagram />
+        <IconBrandInstagram size={24} stroke={1.8} />
       </a>
       <a
         href="mailto:yanjia20050504@gmail.com"
-        className="border-2 border-white/80 rounded-full p-1.5 transition hover:bg-white hover:text-red-200"
+        className="inline-flex h-10 w-10 items-center justify-center text-white/90 transition hover:text-red-200 hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         onClick={() =>
           sendGAEvent("event", "social_click", {
             platform: "email",
@@ -36,13 +31,13 @@ export default function MobileFooter() {
         }
         aria-label="Email"
       >
-        <IoMail />
+        <IconMail size={24} stroke={1.8} />
       </a>
       <a
         href="https://www.linkedin.com/in/fengyenchia/"
         target="_blank"
         rel="noreferrer noopener"
-        className="border-2 border-white/80 rounded-full p-1.5 transition hover:bg-white hover:text-red-200"
+        className="inline-flex h-10 w-10 items-center justify-center text-white/90 transition hover:text-red-200 hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         onClick={() =>
           sendGAEvent("event", "social_click", {
             platform: "linkedIn",
@@ -51,13 +46,13 @@ export default function MobileFooter() {
         }
         aria-label="LinkedIn"
       >
-        <IoLogoLinkedin />
+        <IconBrandLinkedin size={24} stroke={1.8} />
       </a>
       <a
         href="https://github.com/fengyenchia"
         target="_blank"
         rel="noreferrer noopener"
-        className="border-2 border-white/80 rounded-full p-1.5 transition hover:bg-white hover:text-red-200"
+        className="inline-flex h-10 w-10 items-center justify-center text-white/90 transition hover:text-red-200 hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         onClick={() =>
           sendGAEvent("event", "social_click", {
             platform: "gitHub",
@@ -66,7 +61,7 @@ export default function MobileFooter() {
         }
         aria-label="GitHub"
       >
-        <IoLogoGithub />
+        <IconBrandGithub size={24} stroke={1.8} />
       </a>
     </div>
   );

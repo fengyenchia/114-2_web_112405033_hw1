@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/designProject`,
+      url: `${baseUrl}/designProjects`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/programmingProject`,
+      url: `${baseUrl}/programmingProjects`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,

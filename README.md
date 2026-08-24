@@ -1,68 +1,154 @@
-# 馮妍嘉 個人作品集網頁 (Yen-Chia's Portfolio)
+# Yen-Chia Portfolio
 
-![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=flat-flat&logo=nextdotjs)
-![React](https://img.shields.io/badge/React-19.2-61DAFB?style=flat-flat&logo=react)
-![pnpm](https://img.shields.io/badge/pnpm-9.x-F69220?style=flat-flat&logo=pnpm)
-![Prisma](https://img.shields.io/badge/Prisma-6.19-2D3748?style=flat-flat&logo=prisma)
-![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?style=flat-flat&logo=supabase)
+馮妍嘉（Yen-Chia）的個人作品集網站，展示網頁開發、互動設計、視覺設計、展覽與 3D 作品。網站採用 Next.js App Router 建置，內容由 Supabase PostgreSQL 管理，並以 Prisma 提供型別安全的資料存取。
 
+[瀏覽正式網站](https://www.fengyenchia.com/)
 
-## 專案概述
+![Yen-Chia Portfolio 預覽](./public/og-image.png)
 
-此專案為馮妍嘉的個人作品集網站，展示網頁開發、互動設計、視覺設計、3D 建模等領域的技能與創作成果。網站採用 Next.js 的 App Router 與 Server Components 技術，結合 Tailwind CSS，製作出一個響應式網頁。後端則使用 Supabase 提供的 PostgreSQL 資料庫，並透過 Prisma Client 進行資料管理與操作。
+## 特色
 
-[**正式作品集網站**](https://www.fengyenchia.com/)
+- 響應式作品集介面：桌面側欄與手機抽屜式導覽。
+- 3D 影片預覽：支援鍵盤開啟、`Escape` 關閉、關閉按鈕焦點與原生影片控制列。
+- 搜尋引擎最佳化：Metadata、Open Graph 圖片、`robots.txt` 與 sitemap。
+- 效能處理：公開頁面採 ISR，每小時重新驗證；非首屏作品圖片採延遲載入。
+- 使用者行為分析：透過 Google Analytics 記錄導覽與社群連結點擊。
 
-## 技術棧與架構
+## 技術棧
 
-### 前端開發 (Front-end)
-* **核心框架**：Next.js 16 & React 19
-* **視覺樣式**：Tailwind CSS 4.0
-* **動態特效**：Framer Motion
-* **圖示支援**：React Icons
+| 類別 | 技術 |
+| --- | --- |
+| 框架 | Next.js 16、React 19、TypeScript |
+| 樣式 | Tailwind CSS 4 |
+| 資料庫 | Supabase PostgreSQL |
+| ORM | Prisma 6 |
+| 動畫 | Motion、GSAP、React View Transition |
+| 圖示 | Tabler Icons |
+| 分析 | Google Analytics（`@next/third-parties`） |
+| 套件管理 | pnpm |
 
-### 後端與資料庫 (Back-end & Database)
-* **資料庫環境**：Supabase (PostgreSQL)
-* **ORM 工具**：Prisma Client 6.19 (支援 Transaction Pooler 與 Session 直連分流)
-* **資料初始化**：採用 `tsx prisma/seed.ts` 腳本，一鍵注入所有資料。
+## 網站路由
 
-### 開發工具 (Tools)
-* **套件管理**：pnpm
-* **環境控管**：TypeScript 5.9 + ESLint 9
+| 路由 | 說明 |
+| --- | --- |
+| `/` | 首頁與個人介紹入口 |
+| `/about` | 個人簡介、學經歷與技能 |
+| `/designProjects` | 視覺與互動設計作品 |
+| `/programmingProjects` | 程式與網頁開發作品 |
+| `/exhibitionWorks` | 展覽與動態視覺作品 |
+| `/3dWorks` | 3D 影像、影片與列印模型 |
 
----
-
-## 📂 專案核心目錄結構
+## 專案結構
 
 ```text
-├── app/                  # Next.js App Router 頁面路由與全域配置
-│   ├── 3dWorks/          # 3D 建模與動態作品頁
-│   ├── about/            # 關於我 (學經歷、技術圖表)
-│   ├── designProject/    # 互動與視覺設計專案頁
-│   ├── exhibitionWorks/  # 展覽主視覺與相關作品頁
-│   ├── programmingProject/ # 程式開發與新媒體專案頁
-│   ├── globals.css       # 全域樣式設定 (Tailwind 核心配置)
-│   ├── layout.tsx        # 全域 Layout 與 Metadata SEO 設定
-│   └── page.tsx          # 網站主頁入口
-├── components/           # 模組化可複用 UI 元件庫
-│   ├── designCard.tsx    # 設計專案卡片
-│   ├── fadeIn.tsx        # 自訂動畫轉場元件 (Framer Motion)
-│   ├── homeButton.tsx    # 回首頁按鈕
-│   ├── LogoLoop.tsx      # 社群媒體與品牌標誌跑馬燈 (含 .css, .d.ts)
-│   ├── Menu.tsx          # 導覽選單元件 (含 MobileMenu, MobileFooter)
-│   ├── programmingCard.tsx # 程式專案卡片
-│   ├── ScrollVelocity.tsx # 動態滾動速度字體特效 (含 .css)
-│   ├── skillCard.tsx     # 技能分類卡片
-│   ├── TextType.tsx      # 打字機視覺效果元件 (含 .css)
-│   ├── TrueFocus.jsx     # 文字聚焦特效元件 (含 .css)
-│   └── video.tsx         # 影片播放與燈箱彈窗模組
-├── lib/                  # 全域共用工具函式與配置 (如 Prisma 實例)
-├── prisma/               # Database Schema 與 資料庫控制中心
-│   ├── migrations/       # 資料庫結構變更紀錄歷史
-│   ├── schema.prisma     # 資料庫結構定義藍藍圖 (PostgreSQL)
-│   └── seed.ts           # 資料庫初始化自動化腳本 (一鍵注入資料)
-├── public/               # 靜態資源存放庫 (影片、作品渲染圖、音訊)
-├── .env                  # 環境變數配置文件 (資料庫雙通道連線字串)
-├── package.json          # 專案腳本與套件相依性清單
-├── pnpm-lock.yaml        # pnpm 鎖定檔 (確保團隊安裝版本一致)
-└── postcss.config.mjs    # PostCSS 轉換工具配置文件 (支援 Tailwind CSS 運作)
+app/
+├── _components/                 # 首頁專屬動畫元件
+├── about/
+│   └── _components/             # About 頁專屬元件
+├── designProjects/
+│   └── _components/             # Design Projects 卡片與列表
+├── programmingProjects/
+│   └── _components/             # Programming Projects 卡片與列表
+├── exhibitionWorks/
+│   └── _components/             # 展覽頁專屬動態元件
+├── 3dWorks/
+│   └── _components/             # 3D 影片預覽與列表
+├── layout.tsx                   # 全域 layout、字體、Metadata、GA 與 ISR
+├── sitemap.ts                   # Sitemap
+└── robots.ts                    # Robots 規則
+
+components/                      # 跨頁共用導覽、Footer、動畫與按鈕
+lib/db.ts                        # Prisma Client 單例
+prisma/
+├── schema.prisma                # PostgreSQL schema
+├── migrations/                  # 結構變更紀錄
+└── seed.ts                      # 開發資料初始化
+public/                          # 圖片、影片、Open Graph 圖片與本地字體
+```
+
+## 資料模型
+
+主要內容以以下 Prisma model 管理：
+
+- `Profile`：個人名稱、介紹、頭像與標語。
+- `About_Content`、`About_Education`、`About_Experience`、`About_Skill`：About 頁內容。
+- `DesignProjects`：設計作品、圖片、標籤與外部連結。
+- `ProgrammingProjects`：程式作品、雙連結與可自訂按鈕文字。
+- `ThreeDWorks`：3D 作品影片與顯示比例設定。
+
+## 本機開發
+
+### 需求
+
+- Node.js 20 或更新版本
+- pnpm
+- 可連線的 Supabase PostgreSQL 專案
+
+### 安裝
+
+```bash
+pnpm install
+```
+
+建立 `.env`，並設定以下變數：
+
+```env
+DATABASE_URL=""
+DIRECT_URL=""
+NEXT_PUBLIC_GA_ID=""
+```
+
+| 變數 | 用途 |
+| --- | --- |
+| `DATABASE_URL` | Prisma 執行時使用的 PostgreSQL 連線字串。 |
+| `DIRECT_URL` | Prisma migration 使用的直接資料庫連線字串。 |
+| `NEXT_PUBLIC_GA_ID` | 選填。Google Analytics Measurement ID；未設定時不載入分析元件。 |
+
+啟動開發伺服器：
+
+```bash
+pnpm dev
+```
+
+開啟 [http://localhost:3000](http://localhost:3000)。
+
+## 常用指令
+
+```bash
+# 啟動本機開發
+pnpm dev
+
+# 建置 production bundle
+pnpm build
+
+# 啟動 production server
+pnpm start
+
+# 執行 ESLint
+pnpm lint
+
+# 重新產生 Prisma Client
+pnpm prisma generate
+
+# 寫入開發用 seed 資料
+pnpm prisma db seed
+```
+
+## 資料庫變更
+
+修改 `prisma/schema.prisma` 後，請先備份資料庫，再建立並檢查 migration。正式環境的 migration 應由部署流程或資料庫管理者執行；請勿在含正式內容的資料庫使用 `prisma migrate reset`。
+
+```bash
+pnpm prisma migrate dev --name <change_name>
+pnpm prisma generate
+```
+
+## 部署
+
+專案適合部署至 Vercel。部署前請在專案環境變數中設定：
+
+- `DATABASE_URL`
+- `DIRECT_URL`
+- `NEXT_PUBLIC_GA_ID`（選填）
+
+部署後，請確認 Supabase 網路設定允許部署環境連線，並驗證 sitemap、Open Graph 圖片與 Google Analytics 是否正常載入。
